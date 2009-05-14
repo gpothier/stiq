@@ -4,13 +4,13 @@ import sys
 import shutil
 import urllib
 
-AGENT_LIBS_URL = "http://pleiad.cl/files/tod/tod-agent/"
+AGENT_LIBS_URL = "http://pleiad.cl/files/tod/tod-agent/branches/0.9/"
 
 def release(version):
 	zzuMod = useSVN('zz.utils', 'http://pleiad.cl/svn/zz/devel/zz.utils')
 	zzeuMod = useSVN('zz.eclipse.utils', 'http://pleiad.cl/svn/zz/devel/zz.eclipse.utils/')
 	zzjiMod = useSVN('zz.jinterp', 'http://pleiad.cl/svn/zz/devel/zz.jinterp')
-	todMod = useSVN('TOD', 'http://pleiad.cl/svn/tod/trunk/')
+	todMod = useSVN('TOD', 'http://pleiad.cl/svn/tod/branches/0.9/')
 	
 	print '############################################################'
 	print 'Checking and downloading native library builds...'
