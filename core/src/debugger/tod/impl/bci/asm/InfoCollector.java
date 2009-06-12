@@ -80,7 +80,7 @@ public class InfoCollector extends ClassAdapter
 			String aSuperName,
 			String[] aInterfaces)
 	{
-		assert aName.equals(itsName);
+		assert aName.equals(itsName) : aName + " vs. " + itsName;
 		itsSuperName = aSuperName;
 	}
 	
