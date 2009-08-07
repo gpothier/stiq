@@ -99,7 +99,7 @@ public class DisassemblyPanel extends JPanel
 	private JTable itsTable;
 	private JLabel itsTitleLabel;
 
-	private IRWProperty<Boolean> pShowTODInstructions = new SimpleRWProperty<Boolean>(this, false)
+	private IRWProperty<Boolean> pShowTODInstructions = new SimpleRWProperty<Boolean>(false)
 	{
 		@Override
 		protected void changed(Boolean aOldValue, Boolean aNewValue)

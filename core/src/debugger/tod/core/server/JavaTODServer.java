@@ -58,7 +58,7 @@ public class JavaTODServer extends TODServer
 	
 	private boolean itsUpdatingCapture = false;
 	private final IRWProperty<Boolean> pCaptureEnabled = 
-		new SimpleRWProperty<Boolean>(this, (Boolean) null)
+		new SimpleRWProperty<Boolean>((Boolean) null)
 		{
 			@Override
 			protected Object canChange(Boolean aOldValue, Boolean aNewValue)
