@@ -40,6 +40,7 @@ import java.util.Map;
 import tod.agent.ObjectValue;
 import tod.agent.ObjectValue.FieldValue;
 import tod.agent.io._ByteBuffer;
+import tod.core.database.structure.ObjectId;
 
 /**
  * Decodes objects encoded by {@link ObjectEncoder}
@@ -75,6 +76,7 @@ public class ObjectDecoder
 		case ObjectValue.TYPE_FLOAT: return Float.intBitsToFloat(_ByteBuffer.getIntL(aStream));
 		case ObjectValue.TYPE_DOUBLE: return Double.longBitsToDouble(_ByteBuffer.getLongL(aStream));
 		case ObjectValue.TYPE_BOOLEAN: return aStream.readChar() != 0;
+		case ObjectValue.TYPE_OBJECTID: return new ObjectId(aStream.readLong());
 		case ObjectValue.TYPE_VALUE: return readObjectValue(aStream, aMapping); 
 		case ObjectValue.TYPE_REF:
 			int theId = _ByteBuffer.getIntL(aStream);

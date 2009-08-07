@@ -4,6 +4,8 @@
 package java.tod;
 
 import java.lang.reflect.Field;
+import java.tod.transport.LowLevelEventWriter;
+import java.tod.transport._ObjectId;
 import java.tod.util._IdentityHashMap;
 
 import tod.agent.ObjectValue;
@@ -21,7 +23,7 @@ public class ObjectValueFactory
 	/**
 	 * Converts an object to an {@link ObjectValue}, using reflection to obtain field values.
 	 */
-	private static ObjectValue toObjectValue(Object aObject, _IdentityHashMap<Object, ObjectValue> aMapping)
+	private static ObjectValue toObjectValue(Object aOriginal, int aDepth, Object aObject, Mapping aMapping)
 	{
 		Class<?> theClass = aObject.getClass();
 		ObjectValue theResult = new ObjectValue(theClass.getName(), aObject instanceof Throwable);
@@ -49,24 +51,17 @@ public class ObjectValueFactory
 				
 				theField.setAccessible(theWasAccessible);
 				
-				Object theMapped = aMapping.get(theValue);
-				if (theMapped == null)
-				{
-					theMapped = convert(theValue, aMapping);
-					if (theMapped instanceof ObjectValue)
-					{
-						ObjectValue theObjectValue = (ObjectValue) theMapped;
-						aMapping.put(theValue, theObjectValue);
-					}
-				}
+				FieldValue theFieldValue = new FieldValue(theField.getName());
+				convert(aOriginal, aDepth+1, theValue, aMapping, theFieldValue);
 				
-				theFieldValues.add(new FieldValue(theField.getName(), theMapped));
+				theFieldValues.add(theFieldValue);
 			}
 			
 			theClass = theClass.getSuperclass();
 		}
-		
+
 		theResult.setFields(theFieldValues.toArray(new FieldValue[theFieldValues.size()]));
+		
 		return theResult;
 	}
 	
@@ -76,30 +71,97 @@ public class ObjectValueFactory
 	 */
 	public static Object convert(Object aObject)
 	{
-		return convert(aObject, new _IdentityHashMap<Object, ObjectValue>());
+		Mapping theMapping = new Mapping();
+		FieldValue theResultHolder = new FieldValue(null);
+		convert(aObject, 0, aObject, theMapping, theResultHolder);
+		theMapping.resolve();
+		return theResultHolder.value;
 	}
 	
-	private static Object convert(Object aObject, _IdentityHashMap<Object, ObjectValue> aMapping)
+	private static void convert(Object aOriginal, int aDepth, Object aObject, Mapping aMapping, FieldValue aTarget)
 	{
-		assert ! aMapping.containsKey(aObject);
-		Object theResult;
-		
-		if (aObject == null) theResult = null;
-		else if (isPortable(aObject)) theResult = aObject;
-		else 
+		if (aDepth > 20)
 		{
-			ObjectValue theObjectValue = toObjectValue(aObject, aMapping);
-			aMapping.put(aObject, theObjectValue);
-			theResult = theObjectValue;
+			System.out.println("ObjectValueFactory.convert() - big - "+aObject.getClass()+" "+aObject+" "+aOriginal);
 		}
 		
-		
-		return theResult;
+		if (aObject == null) aTarget.setValue(null);
+		else if (isPortable(aObject)) aTarget.setValue(aObject);
+		else if (! LowLevelEventWriter.shouldSendByValue(aObject)) aTarget.setValue(new _ObjectId(ObjectIdentity.get(aObject)));
+		else 
+		{
+			ObjectValue theObjectValue = aMapping.get(aObject);
+			if (theObjectValue != null) aTarget.setValue(theObjectValue);
+			else if (aMapping.isProcessing(aObject)) aMapping.register(aTarget, aObject);
+			else
+			{
+				aMapping.processing(aObject);
+				theObjectValue = toObjectValue(aOriginal, aDepth, aObject, aMapping);
+				aTarget.setValue(theObjectValue);
+			}
+		}
 	}
 
 	private static boolean isPortable(Object aObject)
 	{
 		return (aObject instanceof String) || (aObject instanceof Number) || (aObject instanceof Boolean);
 	}
+	
+	private static class Mapping
+	{
+		private _IdentityHashMap<Object, ObjectValue> itsMap = new _IdentityHashMap<Object, ObjectValue>();
+		private _ArrayList<FieldResolver> itsResolvers = new _ArrayList<FieldResolver>();
+		
+		public void processing(Object aKey)
+		{
+			itsMap.put(aKey, null);
+		}
+		
+		public boolean isProcessing(Object aKey)
+		{
+			return itsMap.containsKey(aKey);
+		}
+		
+		public void register(FieldValue aTarget, Object aKey)
+		{
+			itsResolvers.add(new FieldResolver(aTarget, aKey));
+		}
+		
+		public void put(Object aKey, ObjectValue aValue)
+		{
+			itsMap.put(aKey, aValue);
+		}
+		
+		public ObjectValue get(Object aKey)
+		{
+			return itsMap.get(aKey);
+		}
+		
+		public void resolve()
+		{
+			for (int i=0;i<itsResolvers.size();i++) 
+			{
+				FieldResolver theResolver = itsResolvers.get(i);
+				theResolver.resolve(this);
+			}
+		}
+		
+	}
+	
+	private static class FieldResolver
+	{
+		private final FieldValue itsFieldValue;
+		private final Object itsKey;
 
+		public FieldResolver(FieldValue aFieldValue, Object aKey)
+		{
+			itsFieldValue = aFieldValue;
+			itsKey = aKey;
+		}
+		
+		public void resolve(Mapping aMapping)
+		{
+			itsFieldValue.setValue(aMapping.get(itsKey));
+		}
+	}
 }

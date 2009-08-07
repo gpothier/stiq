@@ -84,6 +84,12 @@ public class ObjectEncoder
 			aBuffer.put(ObjectValue.TYPE_BOOLEAN);
 			aBuffer.put(v.booleanValue() ? (byte) 1 : (byte) 0);
 		}
+		else if (aObject instanceof _ObjectId)
+		{
+			_ObjectId v = (_ObjectId) aObject;
+			aBuffer.put(ObjectValue.TYPE_OBJECTID);
+			aBuffer.putLong(v.id);
+		}
 		else if (aObject instanceof ObjectValue)
 		{
 			ObjectValue v = (ObjectValue) aObject;

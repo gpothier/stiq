@@ -477,7 +477,7 @@ public class LowLevelEventWriter
 	/**
 	 * Determines if the given object should be sent by value.
 	 */
-	private boolean shouldSendByValue(Object aObject)
+	public static boolean shouldSendByValue(Object aObject)
 	{
 		return (aObject instanceof String) || (aObject instanceof Throwable);
 	}
@@ -485,7 +485,7 @@ public class LowLevelEventWriter
 	/**
 	 * Determines if the given object is indexable (see ILogCollector.register)
 	 */
-	private boolean isIndexable(Object aObject)
+	public static boolean isIndexable(Object aObject)
 	{
 		return (aObject instanceof String);
 	}

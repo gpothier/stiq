@@ -41,9 +41,10 @@ public class ObjectValue
 	public static final byte TYPE_FLOAT = 16;
 	public static final byte TYPE_DOUBLE = 17;
 	public static final byte TYPE_BOOLEAN = 18;
-	public static final byte TYPE_VALUE = 19;
-	public static final byte TYPE_REF = 20;
-	public static final byte TYPE_NULL = 21;
+	public static final byte TYPE_OBJECTID = 19;
+	public static final byte TYPE_VALUE = 20;
+	public static final byte TYPE_REF = 21;
+	public static final byte TYPE_NULL = 22;
 
 	private String itsClassName;
 	private FieldValue[] itsFields;
@@ -119,11 +120,21 @@ public class ObjectValue
 	public static class FieldValue
 	{
 		public final String fieldName;
-		public final Object value;
+		public Object value;
 
+		public FieldValue(String aFieldName)
+		{
+			this(aFieldName, null);
+		}
+		
 		public FieldValue(String aFieldName, Object aValue)
 		{
 			fieldName = aFieldName;
+			value = aValue;
+		}
+		
+		public void setValue(Object aValue)
+		{
 			value = aValue;
 		}
 		
