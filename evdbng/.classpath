@@ -9,8 +9,8 @@
 	<classpathentry kind="lib" path="lib/pom.jar"/>
 	<classpathentry kind="lib" path="lib/reflex-core.jar"/>
 	<classpathentry kind="con" path="org.eclipse.ajdt.core.ASPECTJRT_CONTAINER"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/agent"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/core"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/dbgrid"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/TOD-agent"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/TOD-core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/TOD-dbgrid"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
