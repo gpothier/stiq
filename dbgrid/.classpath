@@ -7,7 +7,7 @@
 	<classpathentry exported="true" kind="lib" path="lib/junit-4.1.jar"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/zz.utils"/>
 	<classpathentry kind="con" path="org.eclipse.ajdt.core.ASPECTJRT_CONTAINER"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/agent"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/TOD-agent"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/TOD-core"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

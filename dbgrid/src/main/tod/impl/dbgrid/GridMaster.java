@@ -810,7 +810,7 @@ public class GridMaster implements RIGridMaster
 	{
 		public MyNodeServer()
 		{
-			super(DebuggerGridConfig.MASTER_NODE_PORT);
+			super(DebuggerGridConfig.MASTER_NODE_PORT, true);
 		}
 
 		@Override
