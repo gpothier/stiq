@@ -416,12 +416,12 @@ void agentClassFileLoadHook(
 	{
 		if (propVerbose>=2) 
 		{
-			printf ("Looking for %s\n", cacheFilePath.native_file_string().c_str());
+			printf ("Looking for %s\n", cacheFilePath.string().c_str());
 			fflush(stdout);
 		}
 		
 		// Check if length is 0
-		if (fs::exists(cacheFilePath.native_file_string()))
+		if (fs::exists(cacheFilePath.string()))
 		{
 			int len = fs::file_size(cacheFilePath);
 			
@@ -434,7 +434,7 @@ void agentClassFileLoadHook(
 				std::fstream f;
 				
 				// Read class definition
-				f.open(cacheFilePath.native_file_string().c_str(), std::ios_base::in | std::ios_base::binary);
+				f.open(cacheFilePath.string().c_str(), std::ios_base::in | std::ios_base::binary);
 				if (f.fail()) fatal_error("Could not open class file");
 				
 				if (propVerbose>=1) printf("Instrumented: %s\n", name);
@@ -448,7 +448,7 @@ void agentClassFileLoadHook(
 				f.close();
 				
 				// Read traced methods array
-				f.open(tracedCacheFilePath.native_file_string().c_str(), std::ios_base::in | std::ios_base::binary);
+				f.open(tracedCacheFilePath.string().c_str(), std::ios_base::in | std::ios_base::binary);
 				if (f.fail()) fatal_error("Could not open traced methods file");
 				nTracedMethods = readInt(&f);
 				tracedMethods = new int[nTracedMethods];
@@ -506,13 +506,13 @@ void agentClassFileLoadHook(
 			// Cache class
 			if (propCachePath != NULL)
 			{
-				if (propVerbose>=2) printf("Caching %s\n", cacheFilePath.native_file_string().c_str());
+				if (propVerbose>=2) printf("Caching %s\n", cacheFilePath.string().c_str());
 				if (! mkdirs(cacheFilePath)) fatal_ioerror("Error in mkdirs");
 		
 				std::fstream f;
 				
 				// Cache bytecode
-				f.open(cacheFilePath.native_file_string().c_str(), std::ios_base::out | std::ios_base::binary | std::ios_base::trunc);
+				f.open(cacheFilePath.string().c_str(), std::ios_base::out | std::ios_base::binary | std::ios_base::trunc);
 				if (f.fail()) fatal_ioerror("Opening cache class file for output");
 				f.write((char*) *new_class_data, len);
 				if (f.bad()) fatal_ioerror("Writing cached class");
@@ -521,7 +521,7 @@ void agentClassFileLoadHook(
 				f.close();
 				
 				// Cache traced methods
-				f.open(tracedCacheFilePath.native_file_string().c_str(), std::ios_base::out | std::ios_base::binary | std::ios_base::trunc);
+				f.open(tracedCacheFilePath.string().c_str(), std::ios_base::out | std::ios_base::binary | std::ios_base::trunc);
 				if (f.fail()) fatal_ioerror("Opening cache traced methods file for output");
 				writeInt(&f, nTracedMethods);
 				for (int i=0;i<nTracedMethods;i++) writeInt(&f, tracedMethods[i]);
@@ -534,10 +534,10 @@ void agentClassFileLoadHook(
 		else if (len == 0 && propCachePath != NULL)
 		{
 			// Mark class as not instrumented.
-			if (propVerbose>=2) printf("Caching empty: %s\n", cacheFilePath.native_file_string().c_str());
+			if (propVerbose>=2) printf("Caching empty: %s\n", cacheFilePath.string().c_str());
 			if (! mkdirs(cacheFilePath)) fatal_ioerror("Error in mkdirs");
 			
-			std::fstream f (cacheFilePath.native_file_string().c_str(), std::ios_base::out | std::ios_base::binary | std::ios_base::trunc);
+			std::fstream f (cacheFilePath.string().c_str(), std::ios_base::out | std::ios_base::binary | std::ios_base::trunc);
 			if (f.fail()) fatal_ioerror("Opening cache class file for output");
 			f.flush();
 			f.close();
@@ -679,8 +679,6 @@ void agentInit(
 	char* aPropCachePath,
 	char* aPropClientName)
 {
-	fs::path::default_name_check(fs::no_check);
-
 	printf("Loading TOD agent - v4.0\n");
 	if (cfgObfuscation == 1) printf(">>>>WARNING obfuscation form agent package to agentX is considered \n");
 	fflush(stdout);
