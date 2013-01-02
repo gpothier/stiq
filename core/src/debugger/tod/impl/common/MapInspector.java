@@ -102,7 +102,7 @@ public class MapInspector extends IteratorStructureInspector<MapInspector.EntryI
 		return null;
 	}
 
-	private class EntryInfo implements IObjectInspector.IEntryInfo
+	public class EntryInfo implements IObjectInspector.IEntryInfo
 	{
 		private final JInstance itsEntry;
 		private final JInstance itsKey;

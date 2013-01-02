@@ -13,6 +13,6 @@
 	<classpathentry kind="con" path="org.eclipse.ajdt.core.ASPECTJRT_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/asm-all-3.2-svn.jar" sourcepath="/asm3-svn"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/zz.jinterp"/>
-	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/agent"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/TOD-agent"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
