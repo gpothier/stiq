@@ -22,9 +22,9 @@ RSA Data Security, Inc. MD5 Message-Digest Algorithm".
 */
 package tod.impl.evdbng;
 
+import cl.inria.stiq.utils.ConfigUtils;
 import sun.misc.VM;
 import tod.impl.evdbng.db.file.SimpleTree;
-import tod.utils.ConfigUtils;
 import zz.utils.bit.BitUtils;
 
 public class DebuggerGridConfigNG

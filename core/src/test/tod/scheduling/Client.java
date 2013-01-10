@@ -32,7 +32,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import tod.Util;
+import cl.inria.stiq.utils.Util;
+
 import tod.gui.GUIUtils;
 import tod.gui.kit.AsyncPanel;
 import tod.tools.monitoring.MonitoringClient.MonitorId;

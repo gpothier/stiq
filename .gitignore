@@ -1,0 +1,12 @@
+agent/bin
+agng/bin
+core/bin
+dbgrid/bin
+evdb1/bin
+evdbng/bin
+intellij-tod.plugin/bin
+tod.plugin.ajdt/bin
+tod.plugin.pytod/bin
+tod.plugin.wst/bin
+tod.plugin/bin
+

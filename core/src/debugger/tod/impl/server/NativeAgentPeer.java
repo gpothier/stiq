@@ -34,9 +34,10 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.net.Socket;
 
-import tod.core.DebugFlags;
-import tod.core.bci.IInstrumenter;
-import tod.core.bci.IInstrumenter.InstrumentedClass;
+import cl.inria.stiq.db.DebugFlags;
+import cl.inria.stiq.instrumenter.IInstrumenter;
+import cl.inria.stiq.instrumenter.IInstrumenter.InstrumentedClass;
+
 import tod.core.config.TODConfig;
 import tod.core.server.TODServer;
 import tod2.agent.AgentConfig;

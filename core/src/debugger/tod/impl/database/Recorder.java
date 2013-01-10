@@ -31,12 +31,13 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.Socket;
 
-import tod.core.DebugFlags;
+import cl.inria.stiq.db.DebugFlags;
+import cl.inria.stiq.db.structure.impl.StructureDatabase;
+import cl.inria.stiq.utils.ByteBuffer;
+
 import tod.core.config.TODConfig;
 import tod.impl.bci.asm2.ASMInstrumenter2;
-import tod.impl.database.structure.standard.StructureDatabase;
 import tod.impl.server.NativeAgentPeer;
-import tod.utils.ByteBuffer;
 import tod2.agent.AgentConfig;
 import zz.utils.Utils;
 import zz.utils.net.Server;

@@ -26,8 +26,9 @@ import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.config.TODConfig;
-import tod.gui.IGUIManager;
 import tod.impl.local.LocalSessionFactory;
 
 /**

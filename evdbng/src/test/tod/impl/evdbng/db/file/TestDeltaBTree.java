@@ -10,7 +10,11 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
-import tod.impl.evdbng.db.file.Page.PidSlot;
+import cl.inria.stiq.db.file.DeltaBTree;
+import cl.inria.stiq.db.file.Page;
+import cl.inria.stiq.db.file.PagedFile;
+import cl.inria.stiq.db.file.Page.PidSlot;
+
 
 public class TestDeltaBTree
 {

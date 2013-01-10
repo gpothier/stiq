@@ -24,7 +24,8 @@ package tod.gui.kit;
 
 import javax.swing.JSplitPane;
 
-import tod.gui.IGUIManager;
+import cl.inria.stiq.IGUIManager;
+
 
 /**
  * A split pane that saves its divider location in a {@link IGUIManager}

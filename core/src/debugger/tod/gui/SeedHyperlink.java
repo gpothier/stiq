@@ -24,6 +24,8 @@ package tod.gui;
 
 import java.awt.Color;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.gui.activities.ActivitySeed;
 import zz.utils.ui.ZHyperlink;
 import zz.utils.ui.text.XFont;

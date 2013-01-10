@@ -30,8 +30,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
+import cl.inria.stiq.utils.ConfigUtils;
+import cl.inria.stiq.utils.Util;
+
 import tod.BenchBase;
-import tod.Util;
 import tod.BenchBase.BenchResults;
 import tod.core.database.browser.ICompoundFilter;
 import tod.core.database.browser.IEventBrowser;
@@ -54,7 +56,6 @@ import tod.impl.dbgrid.GridMaster;
 import tod.impl.dbgrid.RIGridMaster;
 import tod.impl.evdb1.DebuggerGridConfig1;
 import tod.impl.evdb1.GridLogBrowser1;
-import tod.utils.ConfigUtils;
 import zz.utils.ITask;
 import zz.utils.Utils;
 import zz.utils.srpc.SRPCRegistry;

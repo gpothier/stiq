@@ -37,15 +37,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import cl.inria.stiq.DBSideIOThread;
+import cl.inria.stiq.db.structure.impl.StructureDatabase;
+
 import tod.core.config.TODConfig;
 import tod.core.database.structure.IMutableStructureDatabase;
-import tod.impl.database.structure.standard.StructureDatabase;
 import tod.impl.replay2.EventCollector;
 import tod.impl.replay2.LocalsSnapshot;
 import tod.impl.replay2.ReifyEventCollector;
 import tod.impl.replay2.ReifyEventCollector.Event;
 import tod.impl.replay2.ReplayerLoader;
-import tod.impl.server.DBSideIOThread;
 import zz.utils.Utils;
 
 public class PartialReplayTest

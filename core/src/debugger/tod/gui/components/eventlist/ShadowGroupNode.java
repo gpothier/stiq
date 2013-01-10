@@ -37,6 +37,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.browser.LocationUtils;
 import tod.core.database.browser.ShadowId;
 import tod.core.database.browser.GroupingEventBrowser.EventGroup;
@@ -46,7 +48,6 @@ import tod.core.database.structure.IAdviceInfo;
 import tod.core.database.structure.IStructureDatabase;
 import tod.core.database.structure.IBehaviorInfo.BytecodeRole;
 import tod.gui.GUIUtils;
-import tod.gui.IGUIManager;
 import tod.gui.Resources;
 import tod.gui.settings.IntimacySettings;
 import zz.utils.notification.IEvent;

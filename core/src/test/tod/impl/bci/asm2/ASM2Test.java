@@ -43,11 +43,12 @@ import org.junit.Test;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.tree.ClassNode;
 
-import tod.core.bci.IInstrumenter;
-import tod.core.bci.IInstrumenter.InstrumentedClass;
+import cl.inria.stiq.db.structure.impl.StructureDatabase;
+import cl.inria.stiq.instrumenter.IInstrumenter;
+import cl.inria.stiq.instrumenter.IInstrumenter.InstrumentedClass;
+
 import tod.core.config.TODConfig;
 import tod.core.database.structure.IStructureDatabase;
-import tod.impl.database.structure.standard.StructureDatabase;
 import zz.utils.Utils;
 
 public class ASM2Test

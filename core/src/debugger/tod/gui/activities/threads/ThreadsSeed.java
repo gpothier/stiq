@@ -22,8 +22,8 @@ RSA Data Security, Inc. MD5 Message-Digest Algorithm".
 */
 package tod.gui.activities.threads;
 
+import cl.inria.stiq.IGUIManager;
 import tod.core.database.browser.ILogBrowser;
-import tod.gui.IGUIManager;
 import tod.gui.activities.ActivityPanel;
 import tod.gui.activities.ActivitySeed;
 import tod.gui.kit.html.HtmlText;

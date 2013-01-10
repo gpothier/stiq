@@ -25,7 +25,8 @@ package tod.core.session;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-import tod.Util;
+import cl.inria.stiq.utils.Util;
+
 import tod.core.config.TODConfig;
 
 /**

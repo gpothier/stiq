@@ -32,11 +32,12 @@ import java.util.List;
 
 import javax.swing.JComponent;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.browser.IEventBrowser;
 import tod.core.database.browser.ILogBrowser;
 import tod.core.database.event.ILogEvent;
 import tod.gui.BrowserData;
-import tod.gui.IGUIManager;
 import tod.gui.activities.cflow.CFlowSeed;
 import tod.gui.components.eventsequences.mural.EventMural;
 import tod.tools.scheduling.IJobScheduler;

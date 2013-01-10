@@ -24,10 +24,11 @@ package tod.impl.local;
 
 import java.net.URI;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.config.TODConfig;
 import tod.core.session.ISession;
 import tod.core.session.ISessionFactory;
-import tod.gui.IGUIManager;
 
 /**
  * Factory for {@link LocalSession}.

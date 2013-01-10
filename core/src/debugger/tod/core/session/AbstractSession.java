@@ -26,8 +26,9 @@ import java.net.URI;
 import java.util.HashSet;
 import java.util.Set;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.config.TODConfig;
-import tod.gui.IGUIManager;
 
 public abstract class AbstractSession implements ISession
 {

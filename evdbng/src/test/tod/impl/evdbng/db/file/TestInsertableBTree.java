@@ -7,10 +7,15 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
-import tod.impl.evdbng.db.Stats;
-import tod.impl.evdbng.db.Stats.Account;
-import tod.impl.evdbng.db.file.Page.PidSlot;
-import tod.impl.evdbng.db.file.mapped.MappedPagedFile;
+import cl.inria.stiq.db.file.IntInsertableBTree;
+import cl.inria.stiq.db.file.LongInsertableBTree;
+import cl.inria.stiq.db.file.Page;
+import cl.inria.stiq.db.file.PagedFile;
+import cl.inria.stiq.db.file.Stats;
+import cl.inria.stiq.db.file.Page.PidSlot;
+import cl.inria.stiq.db.file.Stats.Account;
+import cl.inria.stiq.db.file.mapped.MappedPagedFile;
+
 import zz.utils.Utils;
 
 public class TestInsertableBTree

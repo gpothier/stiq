@@ -31,13 +31,14 @@ import java.util.List;
 import javax.swing.JLabel;
 import javax.swing.JToolTip;
 
-import tod.Util;
+import cl.inria.stiq.IGUIManager;
+import cl.inria.stiq.utils.Util;
+
 import tod.core.database.event.IBehaviorCallEvent;
 import tod.core.database.event.IBehaviorExitEvent;
 import tod.core.database.structure.IBehaviorInfo;
 import tod.gui.FontConfig;
 import tod.gui.Hyperlinks;
-import tod.gui.IGUIManager;
 import tod.gui.kit.html.AsyncHtmlGroup;
 import tod.gui.kit.html.HtmlBody;
 import tod.gui.kit.html.HtmlElement;

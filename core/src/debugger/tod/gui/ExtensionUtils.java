@@ -35,6 +35,8 @@ import java.util.List;
 
 import javax.swing.Action;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.browser.IEventFilter;
 import tod.core.database.event.ILogEvent;
 

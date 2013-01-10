@@ -3,7 +3,7 @@
  */
 package tod.impl.server;
 
-import tod.core.ILogCollector;
+import cl.inria.stiq.transport.ILogCollector;
 import tod.core.config.TODConfig;
 import tod.core.database.structure.IMutableStructureDatabase;
 import tod.core.server.ITODServerFactory;

@@ -24,8 +24,9 @@ package tod.impl.evdb1.queries;
 
 import java.io.Serializable;
 
-import tod.impl.database.AbstractFilteredBidiIterator;
-import tod.impl.database.IBidiIterator;
+import cl.inria.stiq.utils.iterator.AbstractFilteredBidiIterator;
+import cl.inria.stiq.utils.iterator.IBidiIterator;
+
 import tod.impl.dbgrid.IGridEventFilter;
 import tod.impl.dbgrid.messages.GridEvent;
 import tod.impl.evdb1.db.EventList;

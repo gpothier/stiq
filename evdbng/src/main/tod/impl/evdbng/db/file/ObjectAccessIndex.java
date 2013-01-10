@@ -2,6 +2,8 @@ package tod.impl.evdbng.db.file;
 
 import java.util.ArrayList;
 
+import cl.inria.stiq.db.file.Sorter;
+
 import gnu.trove.TLongHashSet;
 import gnu.trove.TLongIntHashMap;
 import gnu.trove.TLongIntProcedure;

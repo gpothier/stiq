@@ -23,7 +23,7 @@ RSA Data Security, Inc. MD5 Message-Digest Algorithm".
 package tod.impl.evdb1.queries;
 
 
-import tod.impl.database.IBidiIterator;
+import cl.inria.stiq.utils.iterator.IBidiIterator;
 import tod.impl.dbgrid.messages.GridEvent;
 import tod.impl.evdb1.db.EventList;
 import tod.impl.evdb1.db.HierarchicalIndex;

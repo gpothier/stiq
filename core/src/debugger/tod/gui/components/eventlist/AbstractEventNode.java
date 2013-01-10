@@ -28,11 +28,12 @@ import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JComponent;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.config.TODConfig;
 import tod.core.database.browser.ILogBrowser;
 import tod.core.database.event.ILogEvent;
 import tod.gui.GUIUtils;
-import tod.gui.IGUIManager;
 import tod.gui.kit.BusPanel;
 import tod.tools.scheduling.IJobScheduler;
 import tod.tools.scheduling.IJobSchedulerProvider;

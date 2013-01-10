@@ -35,11 +35,12 @@ import java.io.File;
 
 import org.junit.Test;
 
+import cl.inria.stiq.DBSideIOThread;
+import cl.inria.stiq.db.structure.impl.StructureDatabase;
+
 import tod.core.config.TODConfig;
 import tod.core.database.structure.IMutableStructureDatabase;
-import tod.impl.database.structure.standard.StructureDatabase;
 import tod.impl.replay2.ReplayerLoader;
-import tod.impl.server.DBSideIOThread;
 import zz.utils.Utils;
 
 public class PartialReplayInstrumenterTest

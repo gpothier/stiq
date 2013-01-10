@@ -10,9 +10,13 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
+import cl.inria.stiq.db.file.Page;
+import cl.inria.stiq.db.file.PagedFile;
+import cl.inria.stiq.db.file.RangeMinMaxTree;
+import cl.inria.stiq.db.file.Page.PidSlot;
+
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import tod.BenchBase;
-import tod.impl.evdbng.db.file.Page.PidSlot;
 
 /**
  * Tests for the {@link RangeMinMaxTree}.

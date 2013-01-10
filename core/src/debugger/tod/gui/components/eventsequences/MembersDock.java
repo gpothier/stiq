@@ -25,11 +25,12 @@ package tod.gui.components.eventsequences;
 import java.util.HashMap;
 import java.util.Map;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.browser.IObjectInspector;
 import tod.core.database.structure.IBehaviorInfo;
 import tod.core.database.structure.IFieldInfo;
 import tod.core.database.structure.IMemberInfo;
-import tod.gui.IGUIManager;
 
 /**
  * A {@link tod.gui.components.eventsequences.SequenceViewsDock} specialized for displaying members of a type.

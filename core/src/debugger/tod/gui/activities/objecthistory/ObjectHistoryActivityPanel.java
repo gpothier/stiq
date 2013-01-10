@@ -27,10 +27,11 @@ import java.awt.Color;
 
 import javax.swing.JTabbedPane;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.browser.ObjectIdUtils;
 import tod.gui.FontConfig;
 import tod.gui.IContext;
-import tod.gui.IGUIManager;
 import tod.gui.activities.ActivityPanel;
 import tod.gui.kit.html.HtmlComponent;
 import tod.gui.kit.html.HtmlDoc;

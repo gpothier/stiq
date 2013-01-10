@@ -52,6 +52,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
+import cl.inria.stiq.IGUIManager;
+import cl.inria.stiq.utils.TODUtils;
+
 import tod.core.database.browser.IEventBrowser;
 import tod.core.database.browser.LocationUtils;
 import tod.core.database.event.ILogEvent;
@@ -59,11 +62,9 @@ import tod.core.database.structure.IBehaviorInfo.BytecodeRole;
 import tod.gui.BrowserData;
 import tod.gui.FontConfig;
 import tod.gui.GUIUtils;
-import tod.gui.IGUIManager;
 import tod.gui.Resources;
 import tod.gui.components.eventsequences.mural.IBalloonProvider.Balloon;
 import tod.gui.formatter.EventFormatter;
-import tod.utils.TODUtils;
 import zz.utils.Cleaner;
 import zz.utils.notification.IEvent;
 import zz.utils.notification.IEventListener;

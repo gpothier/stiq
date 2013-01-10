@@ -26,11 +26,12 @@ import java.util.List;
 
 import javax.swing.JComponent;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.browser.ILogBrowser;
 import tod.core.database.browser.ICompoundInspector.EntryValue;
 import tod.core.database.event.ILogEvent;
 import tod.core.database.structure.ObjectId;
-import tod.gui.IGUIManager;
 import tod.tools.scheduling.IJobScheduler;
 
 /**

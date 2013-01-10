@@ -27,7 +27,8 @@ import java.awt.Color;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
 
-import tod.Util;
+import cl.inria.stiq.utils.Util;
+
 import tod.core.database.event.IBehaviorCallEvent;
 import tod.core.database.event.ILogEvent;
 import tod.core.database.structure.IBehaviorInfo;

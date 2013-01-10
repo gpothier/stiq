@@ -33,7 +33,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
 
-import tod.Util;
+import cl.inria.stiq.IGUIManager;
+import cl.inria.stiq.utils.Util;
+
 import tod.core.config.TODConfig;
 import tod.core.database.browser.IEventBrowser;
 import tod.core.database.browser.LocationUtils;
@@ -48,7 +50,6 @@ import tod.core.database.structure.IStructureDatabase.ProbeInfo;
 import tod.gui.FontConfig;
 import tod.gui.GUIUtils;
 import tod.gui.IContext;
-import tod.gui.IGUIManager;
 import tod.gui.Resources;
 import tod.gui.activities.ActivityPanel;
 import tod.gui.components.BookmarksMural;

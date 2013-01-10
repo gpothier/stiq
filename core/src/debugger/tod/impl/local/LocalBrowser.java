@@ -27,6 +27,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import cl.inria.stiq.utils.iterator.IBidiIterator;
+
 import tod.core.database.browser.ICompoundFilter;
 import tod.core.database.browser.IEventBrowser;
 import tod.core.database.browser.IEventFilter;
@@ -54,7 +56,6 @@ import tod.impl.common.LogBrowserUtils;
 import tod.impl.common.ObjectInspector;
 import tod.impl.common.VariablesInspector;
 import tod.impl.common.event.Event;
-import tod.impl.database.IBidiIterator;
 import tod.impl.local.filter.AbstractFilter;
 import tod.impl.local.filter.AdviceCFlowFilter;
 import tod.impl.local.filter.AdviceSourceIdFilter;

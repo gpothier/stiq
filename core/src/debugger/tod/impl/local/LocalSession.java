@@ -26,16 +26,17 @@ import java.net.URI;
 
 import javax.swing.JComponent;
 
-import tod.core.DebugFlags;
-import tod.core.ILogCollector;
+import cl.inria.stiq.IGUIManager;
+import cl.inria.stiq.db.DebugFlags;
+import cl.inria.stiq.db.structure.impl.HostInfo;
+import cl.inria.stiq.db.structure.impl.StructureDatabase;
+import cl.inria.stiq.transport.ILogCollector;
+
 import tod.core.config.TODConfig;
 import tod.core.database.browser.ILogBrowser;
 import tod.core.database.structure.IMutableStructureDatabase;
 import tod.core.server.TODServer;
 import tod.core.session.AbstractSession;
-import tod.gui.IGUIManager;
-import tod.impl.database.structure.standard.HostInfo;
-import tod.impl.database.structure.standard.StructureDatabase;
 import tod.utils.PrintThroughCollector;
 import zz.utils.properties.IRWProperty;
 

@@ -33,11 +33,12 @@ import java.util.TreeMap;
 
 import javax.swing.JComponent;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.browser.IEventBrowser;
 import tod.core.database.event.EventComparator;
 import tod.core.database.event.ILogEvent;
 import tod.gui.BrowserData;
-import tod.gui.IGUIManager;
 import tod.gui.components.eventsequences.mural.EventMural;
 import zz.utils.Cleaner;
 import zz.utils.ui.Orientation;

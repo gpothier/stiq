@@ -26,10 +26,11 @@ import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.browser.IEventBrowser;
 import tod.core.database.event.ILogEvent;
 import tod.gui.BrowserData;
-import tod.gui.IGUIManager;
 import tod.gui.components.eventsequences.AbstractSequenceView;
 import zz.utils.list.IList;
 import zz.utils.list.IListListener;

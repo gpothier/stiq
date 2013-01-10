@@ -25,9 +25,10 @@ import java.io.File;
 import org.junit.Before;
 import org.junit.Test;
 
+import cl.inria.stiq.db.structure.impl.StructureDatabase;
+
 import tod.core.config.TODConfig;
 import tod.core.database.structure.IMutableStructureDatabase;
-import tod.impl.database.structure.standard.StructureDatabase;
 import tod.impl.dbgrid.Fixtures;
 import tod.impl.dbgrid.db.EventDatabase;
 import tod.impl.dbgrid.messages.MessageType;

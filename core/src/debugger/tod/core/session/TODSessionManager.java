@@ -25,8 +25,9 @@ package tod.core.session;
 import java.net.URI;
 import java.util.Set;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.config.TODConfig;
-import tod.gui.IGUIManager;
 import zz.utils.Utils;
 import zz.utils.properties.IRWProperty;
 import zz.utils.properties.SimpleRWProperty;

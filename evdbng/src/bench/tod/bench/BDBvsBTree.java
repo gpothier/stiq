@@ -4,17 +4,18 @@ import java.io.File;
 
 import tod.BenchBase;
 import tod.BenchBase.BenchResults;
-import tod.impl.evdbng.db.file.InsertableBTree;
-import tod.impl.evdbng.db.file.IntInsertableBTree;
-import tod.impl.evdbng.db.file.Page;
-import tod.impl.evdbng.db.file.Page.PageIOStream;
-import tod.impl.evdbng.db.file.Page.PidSlot;
-import tod.impl.evdbng.db.file.PagedFile;
-import tod.impl.evdbng.db.file.StaticBTree;
-import tod.impl.evdbng.db.file.Tuple;
-import tod.impl.evdbng.db.file.TupleBuffer;
-import tod.impl.evdbng.db.file.TupleBufferFactory;
-import tod.impl.evdbng.db.file.mapped.MappedPagedFile;
+
+import cl.inria.stiq.db.file.InsertableBTree;
+import cl.inria.stiq.db.file.IntInsertableBTree;
+import cl.inria.stiq.db.file.Page;
+import cl.inria.stiq.db.file.PagedFile;
+import cl.inria.stiq.db.file.StaticBTree;
+import cl.inria.stiq.db.file.Tuple;
+import cl.inria.stiq.db.file.TupleBuffer;
+import cl.inria.stiq.db.file.TupleBufferFactory;
+import cl.inria.stiq.db.file.Page.PageIOStream;
+import cl.inria.stiq.db.file.Page.PidSlot;
+import cl.inria.stiq.db.file.mapped.MappedPagedFile;
 
 import com.sleepycat.bind.tuple.TupleBinding;
 import com.sleepycat.bind.tuple.TupleInput;

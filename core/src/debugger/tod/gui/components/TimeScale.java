@@ -31,8 +31,9 @@ import java.awt.event.MouseWheelListener;
 
 import javax.swing.JPanel;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.gui.BrowserData;
-import tod.gui.IGUIManager;
 import tod.gui.components.eventsequences.mural.EventMural;
 import zz.utils.properties.IListProperty;
 import zz.utils.properties.IRWProperty;

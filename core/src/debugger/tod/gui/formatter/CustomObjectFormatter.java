@@ -28,9 +28,10 @@ import java.util.Iterator;
 import java.util.ListIterator;
 import java.util.Set;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.browser.IObjectInspector;
 import tod.core.database.structure.ITypeInfo;
-import tod.gui.IGUIManager;
 import tod.tools.formatting.FormatterFactory;
 import tod.tools.formatting.IPyObjectFormatter;
 import tod.tools.formatting.ReconstitutedObject;

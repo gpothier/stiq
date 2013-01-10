@@ -30,7 +30,8 @@ import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
 import javax.swing.tree.TreePath;
 
-import tod.Util;
+import cl.inria.stiq.utils.Util;
+
 import tod.core.database.structure.IClassInfo;
 import tod.core.database.structure.ILocationInfo;
 import tod.core.database.structure.IMemberInfo;

@@ -30,8 +30,9 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
-import tod.impl.database.BufferedBidiIterator;
-import tod.impl.database.IBidiIterator;
+import cl.inria.stiq.utils.iterator.BufferedBidiIterator;
+import cl.inria.stiq.utils.iterator.IBidiIterator;
+
 
 public class TestBufferedIterator
 {

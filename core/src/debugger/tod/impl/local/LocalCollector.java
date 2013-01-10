@@ -25,7 +25,9 @@ package tod.impl.local;
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 
-import tod.core.DebugFlags;
+import cl.inria.stiq.db.DebugFlags;
+import cl.inria.stiq.db.structure.impl.ThreadInfo;
+
 import tod.core.database.structure.IArrayTypeInfo;
 import tod.core.database.structure.IBehaviorInfo;
 import tod.core.database.structure.IFieldInfo;
@@ -42,7 +44,6 @@ import tod.impl.common.event.ExceptionGeneratedEvent;
 import tod.impl.common.event.FieldWriteEvent;
 import tod.impl.common.event.InstanceOfEvent;
 import tod.impl.common.event.LocalVariableWriteEvent;
-import tod.impl.database.structure.standard.ThreadInfo;
 import tod.impl.local.event.BehaviorCallEvent;
 import tod.impl.local.event.ConstructorChainingEvent;
 import tod.impl.local.event.InstantiationEvent;

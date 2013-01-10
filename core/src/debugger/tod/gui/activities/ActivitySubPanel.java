@@ -24,8 +24,9 @@ package tod.gui.activities;
 
 import javax.swing.JPanel;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.browser.ILogBrowser;
-import tod.gui.IGUIManager;
 import tod.gui.kit.Bus;
 import tod.gui.kit.IBusOwner;
 import tod.tools.scheduling.IJobScheduler;

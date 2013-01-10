@@ -35,8 +35,9 @@ import javax.swing.JPanel;
 import javax.swing.JScrollBar;
 import javax.swing.plaf.basic.BasicArrowButton;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.browser.IEventBrowser;
-import tod.gui.IGUIManager;
 import zz.utils.notification.IEvent;
 import zz.utils.notification.SimpleEvent;
 import zz.utils.properties.IRWProperty;

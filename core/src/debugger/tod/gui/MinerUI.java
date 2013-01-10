@@ -38,7 +38,10 @@ import javax.swing.JComponent;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
-import tod.core.DebugFlags;
+import cl.inria.stiq.IGUIManager;
+import cl.inria.stiq.db.DebugFlags;
+import cl.inria.stiq.utils.TODUtils;
+
 import tod.core.IBookmarks;
 import tod.core.config.TODConfig;
 import tod.core.database.browser.IEventBrowser;
@@ -76,7 +79,6 @@ import tod.tools.scheduling.JobScheduler;
 import tod.tools.scheduling.JobSchedulerMonitor;
 import tod.tools.scheduling.Scheduled;
 import tod.tools.scheduling.IJobScheduler.JobPriority;
-import tod.utils.TODUtils;
 import zz.utils.SimpleAction;
 import zz.utils.properties.IRWProperty;
 import zz.utils.properties.SimpleRWProperty;

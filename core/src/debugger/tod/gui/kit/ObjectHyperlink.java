@@ -24,10 +24,11 @@ package tod.gui.kit;
 
 import java.awt.Color;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.browser.ILogBrowser;
 import tod.core.database.structure.ITypeInfo;
 import tod.core.database.structure.ObjectId;
-import tod.gui.IGUIManager;
 import tod.gui.SeedHyperlink;
 import tod.gui.activities.ActivitySeed;
 import tod.tools.scheduling.IJobScheduler;

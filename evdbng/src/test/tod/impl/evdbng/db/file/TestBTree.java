@@ -28,6 +28,12 @@ import java.util.Random;
 import org.junit.Assert;
 import org.junit.Test;
 
+import cl.inria.stiq.db.file.PagedFile;
+import cl.inria.stiq.db.file.SimpleTuple;
+import cl.inria.stiq.db.file.StaticBTree;
+import cl.inria.stiq.db.file.Tuple;
+import cl.inria.stiq.db.file.TupleIterator;
+
 import tod.impl.evdbng.db.RoleIndexSet;
 
 public class TestBTree

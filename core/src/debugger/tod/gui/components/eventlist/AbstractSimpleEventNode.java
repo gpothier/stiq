@@ -39,7 +39,9 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JPopupMenu;
 
-import tod.core.DebugFlags;
+import cl.inria.stiq.IGUIManager;
+import cl.inria.stiq.db.DebugFlags;
+
 import tod.core.config.TODConfig;
 import tod.core.database.browser.LocationUtils;
 import tod.core.database.event.ICallerSideEvent;
@@ -48,7 +50,6 @@ import tod.core.database.structure.IBehaviorInfo;
 import tod.core.database.structure.IBehaviorInfo.BytecodeRole;
 import tod.core.database.structure.IBehaviorInfo.BytecodeTagType;
 import tod.gui.GUIUtils;
-import tod.gui.IGUIManager;
 import tod.gui.kit.Bus;
 import tod.gui.kit.html.HtmlBody;
 import tod.gui.kit.html.HtmlComponent;

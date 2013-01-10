@@ -38,6 +38,10 @@ import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
+import cl.inria.stiq.IGUIManager;
+import cl.inria.stiq.utils.TODUtils;
+import cl.inria.stiq.utils.iterator.IBidiIterator;
+
 import tod.core.database.browser.ICompoundFilter;
 import tod.core.database.browser.IEventFilter;
 import tod.core.database.browser.ILogBrowser;
@@ -45,15 +49,12 @@ import tod.core.database.browser.LocationUtils;
 import tod.core.database.event.ILogEvent;
 import tod.core.database.structure.ObjectId;
 import tod.gui.IContext;
-import tod.gui.IGUIManager;
 import tod.gui.activities.ActivityPanel;
 import tod.gui.activities.ActivitySeed;
 import tod.gui.components.eventlist.EventListPanel;
 import tod.gui.kit.Bus;
 import tod.gui.kit.SavedSplitPane;
 import tod.gui.kit.messages.ShowCFlowMsg;
-import tod.impl.database.IBidiIterator;
-import tod.utils.TODUtils;
 import zz.utils.SimpleListModel;
 import zz.utils.notification.IEvent;
 import zz.utils.notification.IEventListener;

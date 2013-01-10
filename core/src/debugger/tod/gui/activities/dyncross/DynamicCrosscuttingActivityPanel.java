@@ -37,6 +37,8 @@ import javax.swing.JTable;
 import javax.swing.table.TableCellEditor;
 import javax.swing.table.TableCellRenderer;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.browser.ICompoundFilter;
 import tod.core.database.browser.IEventBrowser;
 import tod.core.database.browser.ILogBrowser;
@@ -48,7 +50,6 @@ import tod.core.database.structure.IBehaviorInfo.BytecodeRole;
 import tod.core.database.structure.tree.StructureTreeBuilders;
 import tod.gui.BrowserData;
 import tod.gui.IContext;
-import tod.gui.IGUIManager;
 import tod.gui.activities.ActivityPanel;
 import tod.gui.activities.dyncross.DynamicCrosscuttingSeed.Highlight;
 import tod.gui.components.LocationTreeTable;

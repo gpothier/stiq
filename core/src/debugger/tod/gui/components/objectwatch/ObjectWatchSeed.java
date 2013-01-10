@@ -22,9 +22,9 @@ RSA Data Security, Inc. MD5 Message-Digest Algorithm".
 */
 package tod.gui.components.objectwatch;
 
+import cl.inria.stiq.IGUIManager;
 import tod.core.database.event.ILogEvent;
 import tod.core.database.structure.ObjectId;
-import tod.gui.IGUIManager;
 
 public class ObjectWatchSeed extends WatchSeed
 {

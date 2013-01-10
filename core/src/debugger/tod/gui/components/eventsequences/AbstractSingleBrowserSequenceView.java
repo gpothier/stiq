@@ -26,11 +26,12 @@ import java.awt.Color;
 import java.util.Collections;
 import java.util.List;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.browser.IEventBrowser;
 import tod.core.database.browser.ILogBrowser;
 import tod.core.database.event.ILogEvent;
 import tod.gui.BrowserData;
-import tod.gui.IGUIManager;
 
 /**
  * A browser sequence view for a single browser.

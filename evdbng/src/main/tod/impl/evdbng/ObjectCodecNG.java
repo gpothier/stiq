@@ -22,8 +22,8 @@ RSA Data Security, Inc. MD5 Message-Digest Algorithm".
 */
 package tod.impl.evdbng;
 
+import cl.inria.stiq.db.file.Page.PageIOStream;
 import tod.core.database.structure.ObjectId;
-import tod.impl.evdbng.db.file.Page.PageIOStream;
 
 /**
  * Provides methods to read and write objects to {@link PageIOStream}s.

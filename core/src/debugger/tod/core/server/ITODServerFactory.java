@@ -22,7 +22,7 @@ RSA Data Security, Inc. MD5 Message-Digest Algorithm".
 */
 package tod.core.server;
 
-import tod.core.ILogCollector;
+import cl.inria.stiq.transport.ILogCollector;
 import tod.core.config.TODConfig;
 import tod.core.database.structure.IMutableStructureDatabase;
 

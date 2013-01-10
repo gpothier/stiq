@@ -26,8 +26,9 @@ import static org.junit.Assert.fail;
 import org.junit.Test;
 import org.junit.runner.JUnitCore;
 
+import cl.inria.stiq.utils.iterator.IBidiIterator;
+
 import tod.core.database.TimestampGenerator;
-import tod.impl.database.IBidiIterator;
 import tod.impl.evdb1.Fixtures1;
 import tod.impl.evdb1.db.HierarchicalIndex;
 import tod.impl.evdb1.db.RoleIndexSet;

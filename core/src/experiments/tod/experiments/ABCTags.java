@@ -30,6 +30,10 @@ import java.util.Collections;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 
+import cl.inria.stiq.IGUIManager;
+import cl.inria.stiq.db.structure.impl.StructureDatabase;
+import cl.inria.stiq.utils.iterator.IBidiIterator;
+
 import tod.core.config.TODConfig;
 import tod.core.database.browser.ICompoundFilter;
 import tod.core.database.browser.IEventBrowser;
@@ -57,12 +61,9 @@ import tod.core.database.structure.IStructureDatabase.ProbeInfo;
 import tod.core.session.AbstractSession;
 import tod.core.session.ISession;
 import tod.gui.IExtensionPoints;
-import tod.gui.IGUIManager;
 import tod.gui.MinerUI;
 import tod.gui.activities.structure.StructureSeed;
 import tod.impl.bci.asm2.ASMInstrumenter2;
-import tod.impl.database.IBidiIterator;
-import tod.impl.database.structure.standard.StructureDatabase;
 import zz.utils.Utils;
 import zz.utils.properties.IRWProperty;
 

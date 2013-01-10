@@ -26,7 +26,9 @@ import java.awt.Color;
 
 import javax.swing.JComponent;
 
-import tod.Util;
+import cl.inria.stiq.IGUIManager;
+import cl.inria.stiq.utils.Util;
+
 import tod.core.database.browser.ILogBrowser;
 import tod.core.database.event.ILogEvent;
 import tod.core.database.structure.IBehaviorInfo;

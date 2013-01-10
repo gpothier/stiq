@@ -42,7 +42,7 @@ public class ByteBufferVSArrayBench
 	
 	public static void main(String[] args)
 	{
-		final tod.utils.ByteBuffer theByteBuffer = tod.utils.ByteBuffer.allocate(4096);
+		final cl.inria.stiq.utils.ByteBuffer theByteBuffer = cl.inria.stiq.utils.ByteBuffer.allocate(4096);
 		final java.nio.ByteBuffer theJByteBuffer = java.nio.ByteBuffer.allocate(4096);
 		final java.nio.IntBuffer theJByteBufferAsIntBuffer = theJByteBuffer.asIntBuffer();
 		final java.nio.IntBuffer theJIntBuffer = java.nio.IntBuffer.allocate(1024);
@@ -106,7 +106,7 @@ public class ByteBufferVSArrayBench
 
 	}
 	
-	private static int runByteBuffer(tod.utils.ByteBuffer aBuffer, int aCount)
+	private static int runByteBuffer(cl.inria.stiq.utils.ByteBuffer aBuffer, int aCount)
 	{
 		int t = 0;
 		for(int i=0;i<aCount;i++)

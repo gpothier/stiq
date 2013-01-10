@@ -28,13 +28,14 @@ import java.awt.FlowLayout;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.browser.IObjectInspector;
 import tod.core.database.event.IBehaviorCallEvent;
 import tod.core.database.event.ILogEvent;
 import tod.core.database.structure.IBehaviorInfo;
 import tod.core.database.structure.IMemberInfo;
 import tod.gui.FontConfig;
-import tod.gui.IGUIManager;
 import tod.gui.SeedHyperlink;
 import tod.gui.activities.cflow.CFlowSeed;
 import zz.utils.ui.ZLabel;

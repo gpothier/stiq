@@ -31,7 +31,8 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Properties;
 
-import tod.gui.IGUIManager;
+import cl.inria.stiq.IGUIManager;
+
 import tod.gui.MinerUI;
 import tod.gui.formatter.CustomFormatterRegistry;
 import tod.gui.kit.IOptionsOwner;

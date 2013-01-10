@@ -28,13 +28,14 @@ import java.awt.Dimension;
 
 import javax.swing.JSplitPane;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.browser.IEventBrowser;
 import tod.core.database.browser.IEventFilter;
 import tod.core.database.browser.LocationUtils;
 import tod.core.database.event.ILogEvent;
 import tod.gui.BrowserData;
 import tod.gui.IContext;
-import tod.gui.IGUIManager;
 import tod.gui.activities.ActivityPanel;
 import tod.gui.components.eventlist.EventListPanel;
 import tod.gui.components.highlighter.EventHighlighter;

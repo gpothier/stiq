@@ -26,9 +26,10 @@ import java.util.List;
 
 import org.junit.Test;
 
+import cl.inria.stiq.utils.iterator.IBidiIterator;
+
 import tod.BenchBase;
 import tod.BenchBase.BenchResults;
-import tod.impl.database.IBidiIterator;
 import tod.impl.dbgrid.Fixtures;
 import tod.impl.dbgrid.db.EventDatabase;
 import tod.impl.dbgrid.messages.GridEvent;

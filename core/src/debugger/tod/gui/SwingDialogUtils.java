@@ -25,13 +25,15 @@ package tod.gui;
 import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 
-import tod.gui.IGUIManager.DialogType;
-import tod.gui.IGUIManager.ErrorDialogType;
-import tod.gui.IGUIManager.OkCancelDialogTYpe;
-import tod.gui.IGUIManager.YesNoDialogType;
+import cl.inria.stiq.IGUIManager;
+import cl.inria.stiq.IGUIManager.DialogType;
+import cl.inria.stiq.IGUIManager.ErrorDialogType;
+import cl.inria.stiq.IGUIManager.OkCancelDialogTYpe;
+import cl.inria.stiq.IGUIManager.YesNoDialogType;
+
 
 /**
- * Utility class for implementing {@link IGUIManager#showDialog(tod.gui.IGUIManager.DialogType)}
+ * Utility class for implementing {@link IGUIManager#showDialog(cl.inria.stiq.IGUIManager.DialogType)}
  * on Swing.
  * @author gpothier
  */

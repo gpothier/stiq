@@ -28,6 +28,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import cl.inria.stiq.db.structure.impl.ArrayTypeInfo;
+import cl.inria.stiq.db.structure.impl.ClassInfo;
+import cl.inria.stiq.db.structure.impl.PrimitiveTypeInfo;
+import cl.inria.stiq.db.structure.impl.StructureDatabase;
+import cl.inria.stiq.db.structure.impl.StructureDatabaseUtils;
+import cl.inria.stiq.db.structure.impl.TagMap;
+
 import tod.core.config.TODConfig;
 import tod.core.database.structure.IAdviceInfo;
 import tod.core.database.structure.IArrayTypeInfo;
@@ -52,12 +59,6 @@ import tod.core.database.structure.IStructureDatabase.LocalVariableInfo;
 import tod.core.database.structure.IStructureDatabase.ProbeInfo;
 import tod.core.database.structure.IStructureDatabase.SnapshotProbeInfo;
 import tod.core.database.structure.IStructureDatabase.Stats;
-import tod.impl.database.structure.standard.ArrayTypeInfo;
-import tod.impl.database.structure.standard.ClassInfo;
-import tod.impl.database.structure.standard.PrimitiveTypeInfo;
-import tod.impl.database.structure.standard.StructureDatabase;
-import tod.impl.database.structure.standard.StructureDatabaseUtils;
-import tod.impl.database.structure.standard.TagMap;
 import tod2.agent.AgentConfig;
 import zz.utils.Utils;
 import zz.utils.primitive.IntArray;

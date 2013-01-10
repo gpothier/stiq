@@ -26,6 +26,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import cl.inria.stiq.db.structure.impl.BehaviorInfo;
+import cl.inria.stiq.db.structure.impl.FieldInfo;
+import cl.inria.stiq.db.structure.impl.ThreadInfo;
+
 import tod.core.database.event.ILogEvent;
 import tod.core.database.structure.IBehaviorInfo;
 import tod.core.database.structure.IFieldInfo;
@@ -38,9 +42,6 @@ import tod.impl.common.event.ExceptionGeneratedEvent;
 import tod.impl.common.event.FieldWriteEvent;
 import tod.impl.common.event.LocalVariableWriteEvent;
 import tod.impl.common.event.NewArrayEvent;
-import tod.impl.database.structure.standard.BehaviorInfo;
-import tod.impl.database.structure.standard.FieldInfo;
-import tod.impl.database.structure.standard.ThreadInfo;
 import tod.impl.local.event.ConstructorChainingEvent;
 import tod.impl.local.event.InstantiationEvent;
 import tod.impl.local.event.MethodCallEvent;

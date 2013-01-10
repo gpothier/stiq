@@ -31,7 +31,9 @@ import java.util.List;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
 
-import tod.Util;
+import cl.inria.stiq.IGUIManager;
+import cl.inria.stiq.utils.Util;
+
 import tod.core.database.browser.IVariablesInspector;
 import tod.core.database.browser.ICompoundInspector.EntryValue;
 import tod.core.database.event.IBehaviorCallEvent;
@@ -41,7 +43,6 @@ import tod.core.database.structure.ObjectId;
 import tod.core.database.structure.IStructureDatabase.LocalVariableInfo;
 import tod.gui.GUIUtils;
 import tod.gui.Hyperlinks;
-import tod.gui.IGUIManager;
 import tod.tools.scheduling.IJobScheduler;
 import zz.utils.ui.ZLabel;
 

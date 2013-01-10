@@ -22,13 +22,18 @@ RSA Data Security, Inc. MD5 Message-Digest Algorithm".
 */
 package tod.impl.evdbng.db.file;
 
-import tod.core.DebugFlags;
+import cl.inria.stiq.db.DebugFlags;
+import cl.inria.stiq.db.file.PagedFile;
+import cl.inria.stiq.db.file.SimpleTuple;
+import cl.inria.stiq.db.file.StaticBTree;
+import cl.inria.stiq.db.file.TupleBufferFactory;
+import cl.inria.stiq.db.file.TupleIterator;
+import cl.inria.stiq.db.file.Page.PageIOStream;
+import cl.inria.stiq.db.file.Stats.Account;
+import cl.inria.stiq.db.file.TupleFinder.NoMatch;
 import tod.impl.evdbng.DebuggerGridConfigNG;
 import tod.impl.evdbng.db.DBExecutor;
 import tod.impl.evdbng.db.DBExecutor.DBTask;
-import tod.impl.evdbng.db.Stats.Account;
-import tod.impl.evdbng.db.file.Page.PageIOStream;
-import tod.impl.evdbng.db.file.TupleFinder.NoMatch;
 
 /**
  * A BTree that conceptually stores tuples of the form <key, s> where

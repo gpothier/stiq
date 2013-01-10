@@ -30,7 +30,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import tod.core.DebugFlags;
+import cl.inria.stiq.db.DebugFlags;
+import cl.inria.stiq.utils.TODUtils;
+
 import tod.core.database.browser.IEventBrowser;
 import tod.core.database.browser.IEventFilter;
 import tod.core.database.browser.IEventPredicate;
@@ -56,7 +58,6 @@ import tod.core.database.structure.IStructureDatabase;
 import tod.core.database.structure.ITypeInfo;
 import tod.core.database.structure.ObjectId;
 import tod.tools.monitoring.Monitored;
-import tod.utils.TODUtils;
 import zz.utils.Sieve;
 
 /**

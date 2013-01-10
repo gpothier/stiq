@@ -26,12 +26,13 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import tod.Util;
-import tod.core.DebugFlags;
+import cl.inria.stiq.IGUIManager;
+import cl.inria.stiq.db.DebugFlags;
+import cl.inria.stiq.utils.Util;
+
 import tod.core.database.browser.IObjectInspector;
 import tod.core.database.structure.ITypeInfo;
 import tod.core.database.structure.ObjectId;
-import tod.gui.IGUIManager;
 import zz.utils.ListMap;
 
 /**

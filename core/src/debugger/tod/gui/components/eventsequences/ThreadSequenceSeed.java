@@ -22,9 +22,9 @@ RSA Data Security, Inc. MD5 Message-Digest Algorithm".
 */
 package tod.gui.components.eventsequences;
 
+import cl.inria.stiq.IGUIManager;
 import tod.core.database.browser.ILogBrowser;
 import tod.core.database.structure.IThreadInfo;
-import tod.gui.IGUIManager;
 
 /**
  * Sequence seed for a particular thread.

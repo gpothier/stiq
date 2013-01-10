@@ -28,8 +28,9 @@ import java.awt.Shape;
 import java.awt.geom.GeneralPath;
 import java.util.List;
 
+import cl.inria.stiq.utils.TODUtils;
+
 import tod.gui.BrowserData;
-import tod.utils.TODUtils;
 
 public abstract class AbstractMuralPainter
 {

@@ -22,9 +22,13 @@ RSA Data Security, Inc. MD5 Message-Digest Algorithm".
 */
 package tod.impl.evdbng.db.file;
 
-import tod.core.DebugFlags;
-import tod.impl.evdbng.db.Stats.Account;
-import tod.impl.evdbng.db.file.Page.PageIOStream;
+import cl.inria.stiq.db.DebugFlags;
+import cl.inria.stiq.db.file.PagedFile;
+import cl.inria.stiq.db.file.SimpleTuple;
+import cl.inria.stiq.db.file.StaticBTree;
+import cl.inria.stiq.db.file.TupleBufferFactory;
+import cl.inria.stiq.db.file.Page.PageIOStream;
+import cl.inria.stiq.db.file.Stats.Account;
 
 /**
  * A {@link StaticBTree} of simple tuples (no extra data).

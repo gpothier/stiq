@@ -24,8 +24,9 @@ package tod.core.session;
 
 import java.net.URI;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.config.TODConfig;
-import tod.gui.IGUIManager;
 
 /**
  * Factory for sessions. See {@link SessionTypeManager}.

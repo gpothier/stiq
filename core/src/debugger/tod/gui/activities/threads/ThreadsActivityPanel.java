@@ -37,9 +37,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.structure.IThreadInfo;
 import tod.gui.IContext;
-import tod.gui.IGUIManager;
 import tod.gui.activities.ActivityPanel;
 import tod.gui.components.eventsequences.SequenceViewsDock;
 import tod.gui.components.eventsequences.ThreadSequenceSeed;

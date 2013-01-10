@@ -31,13 +31,14 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.config.TODConfig;
 import tod.core.database.browser.ILogBrowser;
 import tod.core.database.structure.ObjectId;
 import tod.gui.FontConfig;
 import tod.gui.GUIUtils;
 import tod.gui.IContext;
-import tod.gui.IGUIManager;
 import tod.gui.SeedHyperlink;
 import tod.gui.activities.objecthistory.ObjectHistorySeed;
 import tod.gui.formatter.EventFormatter;

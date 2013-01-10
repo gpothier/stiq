@@ -24,8 +24,9 @@ package tod.utils;
 
 import java.io.PrintStream;
 
-import tod.core.DebugFlags;
-import tod.core.ILogCollector;
+import cl.inria.stiq.db.DebugFlags;
+import cl.inria.stiq.transport.ILogCollector;
+
 import tod.core.database.structure.IBehaviorInfo;
 import tod.core.database.structure.IFieldInfo;
 import tod.core.database.structure.IHostInfo;

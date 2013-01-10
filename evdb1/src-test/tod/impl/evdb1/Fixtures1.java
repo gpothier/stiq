@@ -29,10 +29,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import cl.inria.stiq.utils.iterator.IBidiIterator;
+
 import tod.core.database.TimestampGenerator;
 import tod.core.database.event.ILogEvent;
 import tod.core.transport.PacketProcessor.ILogReceiverMonitor;
-import tod.impl.database.IBidiIterator;
 import tod.impl.dbgrid.DerivativeDataPrinter;
 import tod.impl.dbgrid.Fixtures;
 import tod.impl.dbgrid.db.EventDatabase;

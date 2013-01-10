@@ -30,12 +30,13 @@ import java.util.List;
 
 import javax.swing.JPanel;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.IBookmarks;
 import tod.core.IBookmarks.Bookmark;
 import tod.core.IBookmarks.EventBookmark;
 import tod.core.database.browser.ILogBrowser;
 import tod.core.database.event.ILogEvent;
-import tod.gui.IGUIManager;
 import tod.gui.components.eventsequences.GlobalSequenceSeed;
 import tod.gui.components.eventsequences.SequenceViewsDock;
 import tod.gui.components.eventsequences.mural.IBalloonProvider;

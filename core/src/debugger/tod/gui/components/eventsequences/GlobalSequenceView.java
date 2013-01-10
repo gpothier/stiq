@@ -24,9 +24,10 @@ package tod.gui.components.eventsequences;
 
 import java.awt.Color;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.browser.IEventBrowser;
 import tod.core.database.browser.ILogBrowser;
-import tod.gui.IGUIManager;
 
 public class GlobalSequenceView extends AbstractSingleBrowserSequenceView
 {

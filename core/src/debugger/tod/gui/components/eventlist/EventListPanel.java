@@ -39,6 +39,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.browser.IEventBrowser;
 import tod.core.database.browser.IEventFilter;
 import tod.core.database.browser.ILogBrowser;
@@ -61,7 +63,6 @@ import tod.core.database.structure.IAdviceInfo;
 import tod.core.database.structure.IBehaviorInfo.BytecodeRole;
 import tod.core.database.structure.IStructureDatabase.ProbeInfo;
 import tod.gui.GUIUtils;
-import tod.gui.IGUIManager;
 import tod.gui.components.eventlist.EventScroller.UnitScroll;
 import tod.gui.kit.Bus;
 import tod.gui.kit.BusPanel;

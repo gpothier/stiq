@@ -24,7 +24,7 @@ package tod.gui.formatter;
 
 
 
-import tod.Util;
+import cl.inria.stiq.utils.Util;
 import tod.core.database.browser.ILogBrowser;
 import tod.core.database.event.IArrayWriteEvent;
 import tod.core.database.event.IBehaviorCallEvent;

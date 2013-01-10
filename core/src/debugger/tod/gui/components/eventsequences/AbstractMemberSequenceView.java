@@ -26,11 +26,12 @@ import java.awt.Color;
 
 import javax.swing.JComponent;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.browser.IEventBrowser;
 import tod.core.database.browser.IObjectInspector;
 import tod.core.database.structure.IMemberInfo;
 import tod.gui.Hyperlinks;
-import tod.gui.IGUIManager;
 
 /**
  * Abstract base class for event sequence views that displays events relative to a class member.

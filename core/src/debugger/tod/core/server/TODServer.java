@@ -22,11 +22,11 @@ RSA Data Security, Inc. MD5 Message-Digest Algorithm".
 */
 package tod.core.server;
 
-import tod.core.DebugFlags;
+import cl.inria.stiq.db.DebugFlags;
+import cl.inria.stiq.utils.ConfigUtils;
+import cl.inria.stiq.utils.TODUtils;
 import tod.core.config.TODConfig;
 import tod.core.session.ISession;
-import tod.utils.ConfigUtils;
-import tod.utils.TODUtils;
 import zz.utils.net.Server;
 import zz.utils.notification.IEvent;
 import zz.utils.notification.IFireableEvent;

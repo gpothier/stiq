@@ -32,14 +32,15 @@ import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
 
-import tod.core.ILogCollector;
-import tod.core.bci.IInstrumenter;
+import cl.inria.stiq.db.structure.impl.HostInfo;
+import cl.inria.stiq.instrumenter.IInstrumenter;
+import cl.inria.stiq.transport.ILogCollector;
+
 import tod.core.config.TODConfig;
 import tod.core.database.structure.IStructureDatabase;
 import tod.core.server.TODServer;
 import tod.core.transport.CollectorLogReceiver;
 import tod.core.transport.LogReceiver;
-import tod.impl.database.structure.standard.HostInfo;
 import tod2.agent.AgentConfig;
 import zz.utils.properties.IRWProperty;
 import zz.utils.properties.SimpleRWProperty;

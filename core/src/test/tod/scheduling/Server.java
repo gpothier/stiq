@@ -22,7 +22,7 @@ RSA Data Security, Inc. MD5 Message-Digest Algorithm".
 */
 package tod.scheduling;
 
-import tod.Util;
+import cl.inria.stiq.utils.Util;
 import tod.tools.monitoring.Monitored;
 import tod.tools.monitoring.MonitoringServer;
 import tod.tools.monitoring.RIMonitoringServer;

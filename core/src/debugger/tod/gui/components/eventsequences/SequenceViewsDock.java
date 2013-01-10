@@ -43,10 +43,11 @@ import javax.swing.Timer;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.browser.ILogBrowser;
 import tod.core.session.ISession;
 import tod.gui.GUIUtils;
-import tod.gui.IGUIManager;
 import tod.gui.components.eventsequences.mural.AbstractMuralPainter;
 import tod.gui.components.eventsequences.mural.EventMural;
 import tod2.agent.AgentUtils;

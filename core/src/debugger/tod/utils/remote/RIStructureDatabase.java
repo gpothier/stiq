@@ -25,6 +25,8 @@ package tod.utils.remote;
 import java.util.List;
 import java.util.Map;
 
+import cl.inria.stiq.db.structure.impl.TagMap;
+
 import tod.core.config.TODConfig;
 import tod.core.database.structure.IAdviceInfo;
 import tod.core.database.structure.IAspectInfo;
@@ -38,7 +40,6 @@ import tod.core.database.structure.IStructureDatabase.LineNumberInfo;
 import tod.core.database.structure.IStructureDatabase.LocalVariableInfo;
 import tod.core.database.structure.IStructureDatabase.ProbeInfo;
 import tod.core.database.structure.IStructureDatabase.Stats;
-import tod.impl.database.structure.standard.TagMap;
 import zz.utils.srpc.IRemote;
 
 /**

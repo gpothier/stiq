@@ -25,7 +25,6 @@ package tod.impl.evdb1.db;
 import static tod.impl.evdb1.DebuggerGridConfig1.DB_MAX_INDEX_LEVELS;
 import static tod.impl.evdb1.DebuggerGridConfig1.DB_PAGE_POINTER_BITS;
 import static tod.impl.evdb1.DebuggerGridConfig1.EVENT_TIMESTAMP_BITS;
-import tod.agent.AgentUtils;
 import tod.impl.evdb1.db.file.HardPagedFile;
 import tod.impl.evdb1.db.file.IndexTuple;
 import tod.impl.evdb1.db.file.IndexTupleCodec;

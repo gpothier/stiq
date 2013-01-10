@@ -24,9 +24,10 @@ package tod.gui.components.eventlist;
 
 import java.awt.Color;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.event.ILogEvent;
 import tod.gui.FontConfig;
-import tod.gui.IGUIManager;
 import tod.gui.kit.html.HtmlBody;
 import tod.gui.kit.html.HtmlText;
 

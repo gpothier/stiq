@@ -23,7 +23,7 @@ RSA Data Security, Inc. MD5 Message-Digest Algorithm".
 package tod.impl.evdb1.messages;
 
 import static tod.impl.evdb1.DebuggerGridConfig1.MESSAGE_TYPE_BITS;
-import tod.core.DebugFlags;
+import cl.inria.stiq.db.DebugFlags;
 import tod.core.database.structure.IStructureDatabase;
 import tod.core.database.structure.IBehaviorInfo.BytecodeRole;
 import tod.core.database.structure.IStructureDatabase.ProbeInfo;

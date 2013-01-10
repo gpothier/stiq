@@ -35,6 +35,8 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
+import cl.inria.stiq.utils.BitBuffer;
+
 
 public class TestBitBuffer
 {

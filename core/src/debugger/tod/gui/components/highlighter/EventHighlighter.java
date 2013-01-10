@@ -30,12 +30,13 @@ import javax.swing.ButtonGroup;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.database.browser.IEventFilter;
 import tod.core.database.browser.ILogBrowser;
 import tod.core.database.structure.IHostInfo;
 import tod.core.database.structure.IThreadInfo;
 import tod.gui.BrowserData;
-import tod.gui.IGUIManager;
 import tod.gui.MinerUI;
 import tod.gui.components.eventsequences.IEventSequenceSeed;
 import tod.gui.components.eventsequences.SequenceViewsDock;

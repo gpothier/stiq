@@ -31,6 +31,8 @@ import java.util.List;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
 
+import cl.inria.stiq.IGUIManager;
+
 import tod.core.config.TODConfig;
 import tod.core.database.browser.IObjectInspector;
 import tod.core.database.browser.ICompoundInspector.EntryValue;
@@ -42,7 +44,6 @@ import tod.core.database.structure.ObjectId;
 import tod.gui.FontConfig;
 import tod.gui.GUIUtils;
 import tod.gui.Hyperlinks;
-import tod.gui.IGUIManager;
 import tod.gui.kit.AsyncPanel;
 import tod.tools.interpreter.ToStringComputer;
 import tod.tools.scheduling.IJobScheduler;

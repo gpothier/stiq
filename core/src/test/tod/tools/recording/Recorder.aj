@@ -34,7 +34,8 @@ package tod.tools.recording;
 import org.aspectj.lang.reflect.ConstructorSignature;
 import org.aspectj.lang.reflect.MethodSignature;
 
-import tod.core.DebugFlags;
+import cl.inria.stiq.db.DebugFlags;
+
 import tod.core.database.browser.ICompoundInspector;
 import tod.core.database.browser.IEventBrowser;
 import tod.core.database.browser.ILogBrowser;

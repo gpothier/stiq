@@ -6,6 +6,8 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
+import cl.inria.stiq.db.file.Sorter;
+
 
 public class TestSortable
 {

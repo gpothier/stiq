@@ -24,8 +24,8 @@ package tod.impl.evdb1.db;
 
 import static tod.impl.evdb1.DebuggerGridConfig1.DB_PAGE_BUFFER_SIZE;
 import static tod.impl.evdb1.DebuggerGridConfig1.DB_PAGE_SIZE;
-import tod.impl.database.AbstractFilteredBidiIterator;
-import tod.impl.database.IBidiIterator;
+import cl.inria.stiq.utils.iterator.AbstractFilteredBidiIterator;
+import cl.inria.stiq.utils.iterator.IBidiIterator;
 import tod.impl.evdb1.db.RoleIndexSet.RoleTuple;
 import tod.impl.evdb1.db.StdIndexSet.StdTuple;
 import tod.impl.evdb1.db.file.HardPagedFile;
