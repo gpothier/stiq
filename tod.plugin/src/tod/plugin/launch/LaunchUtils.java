@@ -64,7 +64,8 @@ public class LaunchUtils
 		ISession theSession = null;
 		try
 		{
-			theSession = TODSessionManager.getInstance().getSession(theView.getGUIManager(), aConfig, aLaunch);
+			TODSessionManager theSessionManager = TODSessionManager.getInstance();
+			theSession = theSessionManager.getSession(theView.getGUIManager(), aConfig, aLaunch);
 		}
 		catch (Exception e)
 		{

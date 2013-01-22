@@ -76,17 +76,13 @@ public class TODPlugin extends AbstractUIPlugin
 		}
 		else
 		{
+			String theBasePath = theDevPath+"/../git";
 			DBProcessManager.cp += File.pathSeparator
-				+theDevPath+"/core/bin"+File.pathSeparator
-				+theDevPath+"/agent/bin"+File.pathSeparator
-				+theDevPath+"/dbgrid/bin"+File.pathSeparator
-				+theDevPath+"/evdb1/bin"+File.pathSeparator
-				+theDevPath+"/evdbng/bin"+File.pathSeparator
-				+theDevPath+"/zz.utils/bin";
+				+theBasePath+"/tod/tod.plugin/bin";
 			
-			if (System.getProperty("agent14.path") == null) System.setProperty("agent14.path", theDevPath+"/agent/build/tod-agent14.jar");
-			if (System.getProperty("agent15.path") == null) System.setProperty("agent15.path", theDevPath+"/agent/bin");
-			if (System.getProperty("bcilib.path") == null) System.setProperty("bcilib.path", theDevPath+"/agent");
+			if (System.getProperty("agent14.path") == null) System.setProperty("agent14.path", theBasePath+"/tod/agent/build/tod-agent14.jar");
+			if (System.getProperty("agent15.path") == null) System.setProperty("agent15.path", theBasePath+"/tod/agent/bin");
+			if (System.getProperty("bcilib.path") == null) System.setProperty("bcilib.path", theBasePath+"/tod/agent");
 
 		}
 

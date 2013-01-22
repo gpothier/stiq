@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="tod/plugin/fxviews/" kind="src" path="src"/>
-	<classpathentry exported="true" kind="lib" path="lib/log4j.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/zz.utils"/>
-	<classpathentry kind="lib" path="lib/infovis.jar" sourcepath="/infovis-0.9beta2"/>
-	<classpathentry kind="lib" path="lib/asm-all-3.2-svn.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/TOD-core"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/TOD-dbgrid"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="resources.core"/>
+	<classpathentry kind="src" path="src.zz.utils"/>
+	<classpathentry kind="src" path="src.zz.jinterp"/>
+	<classpathentry kind="src" path="src.evdbng"/>
+	<classpathentry kind="src" path="src.dbgrid"/>
+	<classpathentry kind="src" path="src.core"/>
+	<classpathentry kind="src" path="src.agent"/>
+	<classpathentry exported="true" kind="lib" path="lib/asm-all-3.2-svn.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/infovis.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jython-2.2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lucene-core-2.0.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

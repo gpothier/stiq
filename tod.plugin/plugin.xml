@@ -1,112 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?eclipse version="3.0"?>
-<plugin
-   id="tod.plugin"
-   name="TOD Eclipse Plugin"
-   version="0.5.17"
-   provider-name="DCC - Universidad de Chile"
-   class="tod.plugin.TODPlugin">
-
-   <runtime>
-      <library name="plugin.jar">
-         <export name="*"/>
-      </library>
-      
- 	  <library name="lib/asm-all-3.2-svn.jar">
-       <export name="*"/>
-      </library>
-      
-      <library name="lib/log4j.jar"> 
-         <export name="*"/>
-      </library>
-     
-      <library name="lib/jython-2.2.1.jar">
-         <export name="*"/>
-      </library>
-      
-       <!--
-      <library name="../Jython-svn/bin">
-         <export name="*"/>
-      </library>
-      -->
-      
-      <library name="lib/infovis.jar">
-         <export name="*"/>
-      </library>
-      
-      <library name="lib/aspectjrt.jar">
-         <export name="*"/>
-      </library>
-      
-      
-
-      <!-- the DEV/DEPLOY in-out markers are used by a perl script, don't remove -->
-      <!-- DEV-in -->
-      <library name="../zz.utils/bin">
-         <export name="*"/>
-      </library>
-      <library name="../zz.jinterp/bin">
-         <export name="*"/>
-      </library>
-      <library name="../core/bin">
-         <export name="*"/>
-      </library>
-      <library name="../agent/bin">
-         <export name="tod.agent.*"/>
-      </library>
-      <library name="../dbgrid/bin">
-         <export name="*"/>
-      </library>
-      <library name="../evdb1/bin">
-         <export name="*"/>
-      </library>
-      <library name="../evdbng/bin">
-         <export name="*"/>
-      </library>
-     
-      <!-- DEV-out -->
-      
-      <!-- DEPLOY-in     
-      <library name="lib/tod-agent15.jar">
-         <export name="tod.agent.*"/>
-      </library>
-      <library name="lib/tod-debugger.jar">
-         <export name="*"/>
-      </library>
-      <library name="lib/tod-dbgrid.jar">
-         <export name="*"/>
-      </library>
-      <library name="lib/tod-evdb1.jar">
-         <export name="*"/>
-      </library>
-      <library name="lib/tod-evdbng.jar">
-         <export name="*"/>
-      </library>
-      <library name="lib/zz.utils.jar">
-         <export name="*"/>
-      </library>
-      <library name="lib/zz.jinterp.jar">
-         <export name="*"/>
-      </library>
-      DEPLOY-out -->
-   </runtime>
-
-   <requires>
-      <import plugin="org.eclipse.core.runtime" export="true"/>
-      <import plugin="org.eclipse.jdt.core" export="true"/>
-      <import plugin="org.eclipse.jface.text" export="true"/>
-      <import plugin="org.eclipse.pde.ui" export="true" optional="true"/>
-      <import plugin="org.eclipse.ui" export="true"/>
-      <import plugin="org.aspectj.runtime" optional="true"/>
-      <import plugin="org.eclipse.debug.core" export="true"/>
-      <import plugin="org.eclipse.debug.ui" export="true"/>
-      <import plugin="org.eclipse.jdt.ui" export="true"/>
-      <import plugin="org.eclipse.jdt.debug" export="true"/>
-      <import plugin="org.eclipse.jdt.junit" export="true"/>
-      <import plugin="org.eclipse.jdt.junit.runtime" export="true"/>
-      <import plugin="org.eclipse.ui.workbench.texteditor" export="true"/>
-      <import plugin="zz.eclipse.utils" export="true"/>
-   </requires>
+<?eclipse version="3.4"?>
+<plugin>
    <extension-point id="SourceRevealer" name="Source Revealer" schema="schema/SourceRevealer.exsd"/>
    <extension-point id="ActionsForEvent" name="Actions for events" schema="schema/ActionsForEvent.exsd"/>
 
@@ -334,5 +228,6 @@
          point="tod.plugin.SourceRevealer">
       <revealer class="tod.plugin.JavaSourceRevealer"/>
    </extension>
+
 
 </plugin>

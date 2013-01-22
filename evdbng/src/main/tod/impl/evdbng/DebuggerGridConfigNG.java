@@ -22,7 +22,6 @@ RSA Data Security, Inc. MD5 Message-Digest Algorithm".
 */
 package tod.impl.evdbng;
 
-import sun.misc.VM;
 import tod.impl.evdbng.db.file.PagedFile;
 import tod.impl.evdbng.db.file.SimpleTree;
 import tod.utils.ConfigUtils;
@@ -129,8 +128,8 @@ public class DebuggerGridConfigNG
 	
 	private static String getDefaultPageBufferSize()
 	{
-//		int theSize = (int) (Runtime.getRuntime().maxMemory() / (1024*1024));
-		int theSize = (int) (VM.maxDirectMemory() / (1024*1024));
+		int theSize = (int) (Runtime.getRuntime().maxMemory() / (1024*1024));
+//		int theSize = (int) (VM.maxDirectMemory() / (1024*1024));
 		int theBufferSize = theSize * 10 / 10;
 		return theBufferSize + "m";
 	}

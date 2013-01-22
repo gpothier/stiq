@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>tod.plugin</name>
+	<name>tod.plugin.v2</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -26,4 +26,47 @@
 		<nature>org.eclipse.pde.PluginNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>resources.core</name>
+			<type>2</type>
+			<locationURI>GIT_HOME/tod/core/resources</locationURI>
+		</link>
+		<link>
+			<name>src.agent</name>
+			<type>2</type>
+			<locationURI>GIT_HOME/tod/agent/src/java</locationURI>
+		</link>
+		<link>
+			<name>src.core</name>
+			<type>2</type>
+			<locationURI>GIT_HOME/tod/core/src/debugger</locationURI>
+		</link>
+		<link>
+			<name>src.dbgrid</name>
+			<type>2</type>
+			<locationURI>GIT_HOME/tod/dbgrid/src/main</locationURI>
+		</link>
+		<link>
+			<name>src.evdbng</name>
+			<type>2</type>
+			<locationURI>GIT_HOME/tod/evdbng/src/main</locationURI>
+		</link>
+		<link>
+			<name>src.zz.jinterp</name>
+			<type>2</type>
+			<locationURI>GIT_HOME/zz.jinterp/src</locationURI>
+		</link>
+		<link>
+			<name>src.zz.utils</name>
+			<type>2</type>
+			<locationURI>GIT_HOME/zz.utils/src</locationURI>
+		</link>
+	</linkedResources>
+	<variableList>
+		<variable>
+			<name>GIT_HOME</name>
+			<value>$%7BPARENT-1-WORKSPACE_LOC%7D/git</value>
+		</variable>
+	</variableList>
 </projectDescription>

@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: TOD AJDT Plugin
+Bundle-SymbolicName: tod.plugin.ajdt;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: tod.plugin.ajdt.TODPluginAjdt
+Require-Bundle: tod.plugin,
+ org.eclipse.core.runtime;visibility:=reexport,
+ org.eclipse.ui;visibility:=reexport,
+ org.aspectj.runtime;visibility:=reexport,
+ org.eclipse.jdt.ui,
+ org.eclipse.ajdt.core,
+ org.eclipse.ajdt.ui
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-Vendor: DCC Universidad de Chile/Inria Chile
+Bundle-ClassPath: .
+Import-Package: org.eclipse.core.resources,
+ org.eclipse.jdt.core,
+ org.eclipse.jface.text
+Bundle-ActivationPolicy: lazy
