@@ -64,7 +64,6 @@ public interface IInstrumenter
 		
 		/**
 		 * Information about the structure of the class
-		 * @see MethodGroupManager
 		 */
 		public final byte[] info;
 

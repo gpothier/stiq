@@ -20,22 +20,17 @@ MA 02111-1307 USA
 Parts of this work rely on the MD5 algorithm "derived from the 
 RSA Data Security, Inc. MD5 Message-Digest Algorithm".
 */
-package tod.gui.formatter;
+package cl.inria.stiq.tools.formatting;
 
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.ListIterator;
 import java.util.Set;
 
-import cl.inria.stiq.IGUIManager;
-
-import tod.core.database.browser.IObjectInspector;
-import tod.core.database.structure.ITypeInfo;
-import tod.tools.formatting.FormatterFactory;
-import tod.tools.formatting.IPyObjectFormatter;
-import tod.tools.formatting.ReconstitutedObject;
 import zz.utils.Utils;
+import cl.inria.stiq.IGUIManager;
+import cl.inria.stiq.db.structure.ITypeInfo;
+import cl.inria.stiq.tools.IObjectInspector;
 
 /**
  * An object formatter defined by the user.

@@ -32,9 +32,9 @@ import java.io.ObjectOutputStream;
 import java.util.Properties;
 
 import cl.inria.stiq.IGUIManager;
+import cl.inria.stiq.tools.formatting.CustomFormatterRegistry;
 
 import tod.gui.MinerUI;
-import tod.gui.formatter.CustomFormatterRegistry;
 import tod.gui.kit.IOptionsOwner;
 import tod.gui.kit.Options;
 import zz.utils.Base64;

@@ -38,14 +38,14 @@ import cl.inria.stiq.tools.scheduling.JobScheduler;
  * a GUI manager
  * @author gpothier
  */
-public interface IGUIManager extends IBusOwner
+public interface IGUIManager 
 {
-	/**
-	 * Sets the currently viewed seed.
-	 * @param aNewTab If false, the viewer for the seed will replace the
-	 * currently displayed viewer. If true, a new tab will be opened.
-	 */
-	public void openSeed (ActivitySeed aSeed, boolean aNewTab);
+//	/**
+//	 * Sets the currently viewed seed.
+//	 * @param aNewTab If false, the viewer for the seed will replace the
+//	 * currently displayed viewer. If true, a new tab will be opened.
+//	 */
+//	public void openSeed (ActivitySeed aSeed, boolean aNewTab);
 	
 	/**
 	 * Shows the location of the specified probe in the source code.
@@ -62,10 +62,10 @@ public interface IGUIManager extends IBusOwner
 	 */
 	public JobScheduler getJobScheduler();
 	
-	/**
-	 * Returns the debugging session currently associated with this GUI manager.
-	 */
-	public ISession getSession();
+//	/**
+//	 * Returns the debugging session currently associated with this GUI manager.
+//	 */
+//	public ISession getSession();
 	
 	/**
 	 * Shows the next event that occurred at a specific line, relative to
@@ -95,21 +95,21 @@ public interface IGUIManager extends IBusOwner
 	 */
 	public boolean canShowPreviousEventForLine();
 
-	/**
-	 * Shows a list of all the events that occurred at the specified line.
-	 * @param aFilter An optional additional filter.
-	 */
-	public void showEventsForLine(IBehaviorInfo aBehavior, int aLine, IEventFilter aFilter);
-	
-	/**
-	 * Returns a settings manager for this gui.
-	 */
-	public GUISettings getSettings();
-	
-	/**
-	 * Returns the global bookmarks model.
-	 */
-	public IBookmarks getBookmarks();
+//	/**
+//	 * Shows a list of all the events that occurred at the specified line.
+//	 * @param aFilter An optional additional filter.
+//	 */
+//	public void showEventsForLine(IBehaviorInfo aBehavior, int aLine, IEventFilter aFilter);
+//	
+//	/**
+//	 * Returns a settings manager for this gui.
+//	 */
+//	public GUISettings getSettings();
+//	
+//	/**
+//	 * Returns the global bookmarks model.
+//	 */
+//	public IBookmarks getBookmarks();
 	
 	/**
 	 * Shows a message/question to the user.
@@ -123,10 +123,10 @@ public interface IGUIManager extends IBusOwner
 	 */
 	public void showPostIt(JComponent aComponent, Dimension aSize);
 	
-	/**
-	 * Returns an object that can be used to extend the TOD GUI.
-	 */
-	public IExtensionPoints getExtensionPoints();
+//	/**
+//	 * Returns an object that can be used to extend the TOD GUI.
+//	 */
+//	public IExtensionPoints getExtensionPoints();
 	
 	/**
 	 * Models a dialog presented to the user.

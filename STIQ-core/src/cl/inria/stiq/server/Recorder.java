@@ -18,7 +18,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 Parts of this work rely on the MD5 algorithm "derived from the 
 RSA Data Security, Inc. MD5 Message-Digest Algorithm".
 */
-package tod.impl.database;
+package cl.inria.stiq.server;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -31,16 +31,14 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.Socket;
 
-import cl.inria.stiq.db.DebugFlags;
-import cl.inria.stiq.db.structure.impl.StructureDatabase;
-import cl.inria.stiq.utils.ByteBuffer;
-
-import tod.core.config.TODConfig;
-import tod.impl.bci.asm2.ASMInstrumenter2;
-import tod.impl.server.NativeAgentPeer;
 import tod2.agent.AgentConfig;
 import zz.utils.Utils;
 import zz.utils.net.Server;
+import cl.inria.stiq.config.TODConfig;
+import cl.inria.stiq.db.DebugFlags;
+import cl.inria.stiq.db.structure.impl.StructureDatabase;
+import cl.inria.stiq.instrumenter.ASMInstrumenter2;
+import cl.inria.stiq.utils.ByteBuffer;
 
 /**
  * A process that accepts connections from a debugged VM and writes the trace to a file.

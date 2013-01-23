@@ -28,10 +28,11 @@ import javax.swing.JSplitPane;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
+import cl.inria.stiq.tools.formatting.CustomFormatterRegistry;
+import cl.inria.stiq.tools.formatting.CustomObjectFormatter;
+
 import tod.gui.IContext;
 import tod.gui.activities.ActivityPanel;
-import tod.gui.formatter.CustomFormatterRegistry;
-import tod.gui.formatter.CustomObjectFormatter;
 import tod.gui.kit.SavedSplitPane;
 import zz.utils.ui.StackLayout;
 import zz.utils.ui.UniversalRenderer;

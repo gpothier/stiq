@@ -470,7 +470,7 @@ public class BCIUtils implements Opcodes
 					aClassNode.name,
 					aNode.name,
 					aNode.desc,
-//					e.nodes != null ? getBytecodeRanks(aNode, e.nodes) : "?",
+					"?",//e.nodes != null ? getBytecodeRanks(aNode, e.nodes) : "?",
 					e.getMessage());
 		}
 		catch (Exception e)

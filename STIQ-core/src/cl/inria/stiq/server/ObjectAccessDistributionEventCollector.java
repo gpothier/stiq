@@ -29,50 +29,72 @@ POSSIBILITY OF SUCH DAMAGE.
 Parts of this work rely on the MD5 algorithm "derived from the RSA Data Security, 
 Inc. MD5 Message-Digest Algorithm".
 */
-package tod.impl.server;
+package cl.inria.stiq.server;
 
-import tod.core.database.structure.ObjectId;
-import tod.impl.replay2.EventCollector;
+import gnu.trove.TLongHashSet;
+import zz.utils.Utils;
+import cl.inria.stiq.db.structure.ObjectId;
 
-public class CounterEventCollector extends EventCollector
+public class ObjectAccessDistributionEventCollector extends CounterEventCollector
 {
-	private long itsFieldReads = 0;
-	private long itsFieldWrites = 0;
-	private long itsSyncs = 0;
+	private final int itsThreadId;
+	private TLongHashSet itsObjectsSet = new TLongHashSet();
+	
+	private long itsTotalUniqueObjects = 0;
+	private long itsTotalAccesses = 0;
+	private int itsBlocks = 0;
+	private int itsSyncs = 0;
 
-	protected void resetCount()
+	public ObjectAccessDistributionEventCollector(int aThreadId)
 	{
-		itsFieldReads = 0;
-		itsFieldWrites = 0;
-		itsSyncs = 0;
+		itsThreadId = aThreadId;
 	}
-	
-	public long getFieldAccessCount()
-	{
-		return itsFieldReads+itsFieldWrites;
-	}
-	
+
 	@Override
 	public void fieldRead(ObjectId aTarget, int aFieldSlotIndex)
 	{
-		itsFieldReads++;
+		super.fieldRead(aTarget, aFieldSlotIndex);
+//		fieldAccess(aTarget, aFieldId);
 	}
 
 	@Override
 	public void fieldWrite(ObjectId aTarget, int aFieldSlotIndex)
 	{
-		itsFieldWrites++;
+		super.fieldWrite(aTarget, aFieldSlotIndex);
+		fieldAccess(aTarget, aFieldSlotIndex);
 	}
 	
+	protected void fieldAccess(ObjectId aTarget, int aFieldSlotIndex)
+	{
+		long id = aTarget != null ? aTarget.getId() : -1;
+		itsObjectsSet.add(id);
+		itsTotalAccesses++;
+	}
+
+
 	@Override
 	public void sync(long aTimestamp)
 	{
+		super.sync(aTimestamp);
 		itsSyncs++;
-	}
-
-	@Override
-	public String toString()
-	{
-		return "reads: "+itsFieldReads+", writes: "+itsFieldWrites+", syncs: "+itsSyncs;
+		if (itsSyncs % 50 == 0)
+		{
+			itsTotalUniqueObjects += itsObjectsSet.size();
+			itsObjectsSet.clear();
+			itsBlocks++;
+			
+			if (itsBlocks % 10 == 0) 
+			{
+				float avgUniqueObjects = 1f*itsTotalUniqueObjects/itsBlocks;
+				float avgAccesses = 1f*itsTotalAccesses/itsBlocks;
+				float avgEvents = 1f*getFieldAccessCount()/itsBlocks;
+				Utils.println(
+						"[TOD] Access distribution: uobj: %.2f, acc: %.2f, ev: %.2f - u/a: %.2f%%", 
+						avgUniqueObjects,
+						avgAccesses,
+						avgEvents,
+						100f*avgUniqueObjects/avgAccesses);
+			}
+		}
 	}
 }

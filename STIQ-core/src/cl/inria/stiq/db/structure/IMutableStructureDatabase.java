@@ -73,7 +73,6 @@ public interface IMutableStructureDatabase extends IStructureDatabase
 	
 	/**
 	 * Returns the signature id of the behavior, or assigns a new one if necessary.
-	 * @see MethodGroupManager
 	 */
 	public int getBehaviorSignatureId(IBehaviorInfo aBehavior);
 

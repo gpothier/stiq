@@ -22,10 +22,10 @@ RSA Data Security, Inc. MD5 Message-Digest Algorithm".
 */
 package tod.gui.components.eventlist;
 
+import cl.inria.stiq.Hyperlinks;
 import cl.inria.stiq.IGUIManager;
 import tod.core.database.event.IBehaviorCallEvent;
 import tod.core.database.event.INewArrayEvent;
-import tod.gui.Hyperlinks;
 import tod.gui.kit.html.HtmlBody;
 
 public class NewArrayNode extends AbstractSimpleEventNode

@@ -71,52 +71,52 @@ public class ReconstitutedObject
 		return null;
 	}
 
-	@Monitored
-	public Object get(String aFieldName)
-	{
-		IEntryInfo theEntry = getEntry(aFieldName);
-		
-		if (theEntry == null) 
-		{
-			if (getType().isInScope()) Utils.rtex("Field %s not found in class %s.", aFieldName, getType().getName());
-			else Utils.rtex("Class %s is not in scope, cannot access field %s.", getType().getName(), aFieldName);
-		}
-		
-		EntryValue[] theEntryValues = itsInspector.getEntryValue(theEntry);
-		if (theEntryValues == null || theEntryValues.length > 1) throw new RuntimeException("What do we do? "+theEntryValues);
-		
-		Object theValue = theEntryValues.length == 1 ? theEntryValues[0].getValue() : null;
-		
-		ILogBrowser theLogBrowser = itsInspector.getLogBrowser();
-		
-		// Check if this is a registered object.
-		if (theValue instanceof ObjectId)
-		{
-			ObjectId theObjectId = (ObjectId) theValue;
-			Object theRegistered = theLogBrowser.getRegistered(theObjectId);
-			if (theRegistered != null) theValue = theRegistered;
-		}
-
-		if (theValue instanceof ObjectId)
-		{
-			ObjectId theObjectId = (ObjectId) theValue;
-			IObjectInspector theInspector = theLogBrowser.createObjectInspector(theObjectId);
-			theInspector.setReferenceEvent(itsInspector.getReferenceEvent());
-			return FormatterFactory.getInstance().wrap(itsGUIManager, theInspector);
-		}
-		else if (theValue != null)
-		{
-			return Hyperlinks.object(
-					itsGUIManager, 
-					Hyperlinks.TEXT, 
-					itsGUIManager != null ? itsGUIManager.getJobScheduler() : null,
-					null,
-					theValue,
-					itsInspector.getReferenceEvent(), 
-					false);
-		}
-		else return "null";
-	}
+//	@Monitored
+//	public Object get(String aFieldName)
+//	{
+//		IEntryInfo theEntry = getEntry(aFieldName);
+//		
+//		if (theEntry == null) 
+//		{
+//			if (getType().isInScope()) Utils.rtex("Field %s not found in class %s.", aFieldName, getType().getName());
+//			else Utils.rtex("Class %s is not in scope, cannot access field %s.", getType().getName(), aFieldName);
+//		}
+//		
+//		EntryValue[] theEntryValues = itsInspector.getEntryValue(theEntry);
+//		if (theEntryValues == null || theEntryValues.length > 1) throw new RuntimeException("What do we do? "+theEntryValues);
+//		
+//		Object theValue = theEntryValues.length == 1 ? theEntryValues[0].getValue() : null;
+//		
+//		ILogBrowser theLogBrowser = itsInspector.getLogBrowser();
+//		
+//		// Check if this is a registered object.
+//		if (theValue instanceof ObjectId)
+//		{
+//			ObjectId theObjectId = (ObjectId) theValue;
+//			Object theRegistered = theLogBrowser.getRegistered(theObjectId);
+//			if (theRegistered != null) theValue = theRegistered;
+//		}
+//
+//		if (theValue instanceof ObjectId)
+//		{
+//			ObjectId theObjectId = (ObjectId) theValue;
+//			IObjectInspector theInspector = theLogBrowser.createObjectInspector(theObjectId);
+//			theInspector.setReferenceEvent(itsInspector.getReferenceEvent());
+//			return FormatterFactory.getInstance().wrap(itsGUIManager, theInspector);
+//		}
+//		else if (theValue != null)
+//		{
+//			return Hyperlinks.object(
+//					itsGUIManager, 
+//					Hyperlinks.TEXT, 
+//					itsGUIManager != null ? itsGUIManager.getJobScheduler() : null,
+//					null,
+//					theValue,
+//					itsInspector.getReferenceEvent(), 
+//					false);
+//		}
+//		else return "null";
+//	}
 	
 	/**
 	 * Formats this reconstituted object using the custom formatters.
@@ -141,6 +141,6 @@ public class ReconstitutedObject
 	public String toString()
 	{
 		if (itsInspector == null) return "Reconstitution of null";
-		return "Reconstitution of "+itsInspector.getObject()+" at "+itsInspector.getReferenceEvent().getTimestamp();
+		return "Reconstitution of "+itsInspector.getObject()+" at ";//+itsInspector.getReferenceEvent().getTimestamp();
 	}
 }

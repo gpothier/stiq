@@ -217,51 +217,51 @@ public class LocationUtils
 	    return new SourceRange(theType.getName(), theSourceFile, theLineNumber);
 	}
 	
-	/**
-	 * Returns the source range corresponding to the given event.
-	 */
-	public static SourceRange getSourceRange (IStructureDatabase aStructureDatabase, ILogEvent aEvent)
-	{
-		if (aEvent instanceof ICallerSideEvent)
-		{
-			ICallerSideEvent theEvent = (ICallerSideEvent) aEvent;
-			ProbeInfo theProbe = theEvent.getProbeInfo();
-			return getSourceRange(aStructureDatabase, theProbe);
-		}
-		else return null;
-	}
-	
-	/**
-	 * Tries to show the source code for the given event in the gui manager.
-	 */
-	public static void gotoSource(IGUIManager aGUIManager, ILogEvent aEvent)
-	{
-		ProbeInfo theProbe = getProbeInfo(aEvent);
-		if (theProbe != null) aGUIManager.gotoSource(theProbe);
-	}
-
-	
-	/**
-	 * Returns the probe info of the given event.
-	 */
-	public static ProbeInfo getProbeInfo(ILogEvent aEvent)
-	{
-		if (aEvent instanceof ICallerSideEvent)
-		{
-			ICallerSideEvent theEvent = (ICallerSideEvent) aEvent;
-			return theEvent.getProbeInfo();
-		}
-		else return null;
-	}
-
-	/**
-	 * Returns the role of the given event.
-	 */
-	public static BytecodeRole getEventRole(ILogEvent aEvent)
-	{
-		ProbeInfo theProbeInfo = getProbeInfo(aEvent);
-		return theProbeInfo != null ? theProbeInfo.role : null;
-	}
+//	/**
+//	 * Returns the source range corresponding to the given event.
+//	 */
+//	public static SourceRange getSourceRange (IStructureDatabase aStructureDatabase, ILogEvent aEvent)
+//	{
+//		if (aEvent instanceof ICallerSideEvent)
+//		{
+//			ICallerSideEvent theEvent = (ICallerSideEvent) aEvent;
+//			ProbeInfo theProbe = theEvent.getProbeInfo();
+//			return getSourceRange(aStructureDatabase, theProbe);
+//		}
+//		else return null;
+//	}
+//	
+//	/**
+//	 * Tries to show the source code for the given event in the gui manager.
+//	 */
+//	public static void gotoSource(IGUIManager aGUIManager, ILogEvent aEvent)
+//	{
+//		ProbeInfo theProbe = getProbeInfo(aEvent);
+//		if (theProbe != null) aGUIManager.gotoSource(theProbe);
+//	}
+//
+//	
+//	/**
+//	 * Returns the probe info of the given event.
+//	 */
+//	public static ProbeInfo getProbeInfo(ILogEvent aEvent)
+//	{
+//		if (aEvent instanceof ICallerSideEvent)
+//		{
+//			ICallerSideEvent theEvent = (ICallerSideEvent) aEvent;
+//			return theEvent.getProbeInfo();
+//		}
+//		else return null;
+//	}
+//
+//	/**
+//	 * Returns the role of the given event.
+//	 */
+//	public static BytecodeRole getEventRole(ILogEvent aEvent)
+//	{
+//		ProbeInfo theProbeInfo = getProbeInfo(aEvent);
+//		return theProbeInfo != null ? theProbeInfo.role : null;
+//	}
 	
 	/**
 	 * Returns all the advice ids corresponding to the specified location, which

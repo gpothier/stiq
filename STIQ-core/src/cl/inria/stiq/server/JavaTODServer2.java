@@ -1,13 +1,12 @@
 /*
  * Created on Apr 23, 2009
  */
-package tod.impl.server;
+package cl.inria.stiq.server;
 
 import java.net.Socket;
 
-import tod.core.config.TODConfig;
-import tod.core.server.TODServer;
 import zz.utils.properties.IRWProperty;
+import cl.inria.stiq.config.TODConfig;
 
 public class JavaTODServer2 extends TODServer
 {

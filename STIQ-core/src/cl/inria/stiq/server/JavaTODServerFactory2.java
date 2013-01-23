@@ -1,14 +1,12 @@
 /*
  * Created on Apr 23, 2009
  */
-package tod.impl.server;
+package cl.inria.stiq.server;
 
+import cl.inria.stiq.config.TODConfig;
+import cl.inria.stiq.db.structure.IMutableStructureDatabase;
+import cl.inria.stiq.instrumenter.ASMInstrumenter2;
 import cl.inria.stiq.transport.ILogCollector;
-import tod.core.config.TODConfig;
-import tod.core.database.structure.IMutableStructureDatabase;
-import tod.core.server.ITODServerFactory;
-import tod.core.server.TODServer;
-import tod.impl.bci.asm2.ASMInstrumenter2;
 
 public class JavaTODServerFactory2 implements ITODServerFactory
 {

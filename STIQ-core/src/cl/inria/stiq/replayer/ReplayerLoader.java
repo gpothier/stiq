@@ -106,7 +106,7 @@ public class ReplayerLoader extends ClassLoader
 		{
 			if (itsFirstPass)
 			{
-				Class the1stPassClass = loadClass("tod.impl.replay2.ThreadReplayer_FirstPass");
+				Class the1stPassClass = loadClass("cl.inria.stiq.replayer.ThreadReplayer_FirstPass");
 				itsReplayerCtor = the1stPassClass.getConstructor(
 						ReplayerLoader.class, 
 						int.class,
@@ -118,7 +118,7 @@ public class ReplayerLoader extends ClassLoader
 			}
 			else
 			{
-				Class thePartialClass = loadClass("tod.impl.replay2.ThreadReplayer_Partial");
+				Class thePartialClass = loadClass("cl.inria.stiq.replayer.ThreadReplayer_Partial");
 				itsReplayerCtor = thePartialClass.getConstructor(
 						ReplayerLoader.class, 
 						int.class,
@@ -180,7 +180,7 @@ public class ReplayerLoader extends ClassLoader
 
 	private boolean shouldLoadSourceClass(String aName)
 	{
-		return aName.startsWith("tod.impl.replay2.") 
+		return aName.startsWith("cl.inria.stiq.replayer.") 
 			&& ! aName.equals(getClass().getName())
 			&& ! aName.equals(TmpIdManager.class.getName())
 			&& ! aName.equals(LocalsSnapshot.class.getName())
@@ -337,6 +337,7 @@ public class ReplayerLoader extends ClassLoader
 		try
 		{
 			InputStream theStream = ReplayerLoader.class.getResourceAsStream("/"+aClassName+".class");
+			if (theStream == null) throw new RuntimeException("Cannot load source class bytecode for: "+aClassName);
 			return Utils.readInputStream_byte(theStream);
 		}
 		catch (IOException e)

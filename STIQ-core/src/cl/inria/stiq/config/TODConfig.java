@@ -33,10 +33,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
 
-import cl.inria.stiq.utils.ConfigUtils;
-
 import tod2.agent.AgentConfig;
 import zz.utils.PublicCloneable;
+import cl.inria.stiq.server.JavaTODServerFactory2;
+import cl.inria.stiq.utils.ConfigUtils;
 
 /**
  * Instances of this class contain configuration options for a TOD session.
@@ -277,6 +277,14 @@ public class TODConfig extends PublicCloneable implements Serializable
 					"Store behavior bytecode so as to provide disassembled views.",
 					true);
 
+	public static final StringItem SERVER_TYPE =
+			new StringItem(
+					ConfigLevel.ADVANCED,
+					"server-type",
+					"Type of server interface",
+					"Class name of the TOD server factory.",
+					JavaTODServerFactory2.class.getName());
+	
 	public static final BooleanItem BCI_PRELOAD_CLASSES =
 			new BooleanItem(
 					ConfigLevel.ADVANCED,

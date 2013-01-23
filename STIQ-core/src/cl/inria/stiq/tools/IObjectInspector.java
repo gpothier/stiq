@@ -36,7 +36,7 @@ import cl.inria.stiq.db.structure.ObjectId;
  * It can also provide browsers for individual members. 
  * @author gpothier
  */
-public interface IObjectInspector extends ICompoundInspector<IObjectInspector.IEntryInfo>
+public interface IObjectInspector //extends ICompoundInspector<IObjectInspector.IEntryInfo>
 {
 	/**
 	 * Returns the log browser that created this inspector.
@@ -48,11 +48,11 @@ public interface IObjectInspector extends ICompoundInspector<IObjectInspector.IE
 	 */
 	public ObjectId getObject();
 	
-	/**
-	 * Returns the event that corresponds to the creation of the
-	 * inspected object.
-	 */
-	public ICreationEvent getCreationEvent();
+//	/**
+//	 * Returns the event that corresponds to the creation of the
+//	 * inspected object.
+//	 */
+//	public ICreationEvent getCreationEvent();
 	
 	/**
 	 * Returns the type descriptor of the object.
@@ -71,12 +71,12 @@ public interface IObjectInspector extends ICompoundInspector<IObjectInspector.IE
 	 */
 	public List<IEntryInfo> getEntries(int aRangeStart, int aRangeSize);
 	
-	/**
-	 * Returns an event broswer on the events that changed the value 
-	 * of the specified entry of the inspected object.
-	 * Note: Optional operation
-	 */
-	public IEventBrowser getBrowser (IEntryInfo aEntry);
+//	/**
+//	 * Returns an event broswer on the events that changed the value 
+//	 * of the specified entry of the inspected object.
+//	 * Note: Optional operation
+//	 */
+//	public IEventBrowser getBrowser (IEntryInfo aEntry);
 	
 	/**
 	 * Represents an entry in an inspected object.

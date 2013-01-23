@@ -20,11 +20,11 @@ MA 02111-1307 USA
 Parts of this work rely on the MD5 algorithm "derived from the 
 RSA Data Security, Inc. MD5 Message-Digest Algorithm".
 */
-package tod.core.server;
+package cl.inria.stiq.server;
 
+import cl.inria.stiq.config.TODConfig;
+import cl.inria.stiq.db.structure.IMutableStructureDatabase;
 import cl.inria.stiq.transport.ILogCollector;
-import tod.core.config.TODConfig;
-import tod.core.database.structure.IMutableStructureDatabase;
 
 /**
  * A factory for creating TOD servers.

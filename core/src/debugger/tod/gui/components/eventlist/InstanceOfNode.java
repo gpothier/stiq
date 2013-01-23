@@ -24,12 +24,12 @@ package tod.gui.components.eventlist;
 
 import java.awt.Color;
 
+import cl.inria.stiq.Hyperlinks;
 import cl.inria.stiq.IGUIManager;
 
 import tod.core.database.event.IBehaviorCallEvent;
 import tod.core.database.event.IInstanceOfEvent;
 import tod.core.database.event.ILogEvent;
-import tod.gui.Hyperlinks;
 import tod.gui.kit.html.HtmlBody;
 import tod.gui.kit.html.HtmlText;
 

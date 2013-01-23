@@ -33,6 +33,7 @@ import javax.swing.JComponent;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
+import cl.inria.stiq.Hyperlinks;
 import cl.inria.stiq.IGUIManager;
 
 import tod.core.database.event.ILogEvent;
@@ -40,7 +41,6 @@ import tod.core.database.structure.ObjectId;
 import tod.gui.BrowserNavigator;
 import tod.gui.FrozenContext;
 import tod.gui.GUIUtils;
-import tod.gui.Hyperlinks;
 import tod.gui.IContext;
 import tod.gui.components.objectwatch.AbstractWatchProvider.Entry;
 import tod.gui.kit.AsyncPanel;

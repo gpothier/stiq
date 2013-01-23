@@ -22,11 +22,11 @@ RSA Data Security, Inc. MD5 Message-Digest Algorithm".
 */
 package tod.gui.formatter;
 
+import cl.inria.stiq.Hyperlinks;
 import cl.inria.stiq.utils.Util;
 import tod.core.database.browser.ILogBrowser;
 import tod.core.database.structure.ITypeInfo;
 import tod.core.database.structure.ObjectId;
-import tod.gui.Hyperlinks;
 import zz.utils.AbstractFormatter;
 
 /**

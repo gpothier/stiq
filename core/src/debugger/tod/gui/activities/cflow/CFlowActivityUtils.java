@@ -26,10 +26,10 @@ import java.awt.Color;
 
 import javax.swing.JPanel;
 
+import cl.inria.stiq.Hyperlinks;
 import cl.inria.stiq.IGUIManager;
 
 import tod.core.database.event.IBehaviorCallEvent;
-import tod.gui.Hyperlinks;
 import tod.tools.scheduling.IJobScheduler;
 import zz.utils.ui.ZLabel;
 import zz.utils.ui.text.XFont;

@@ -37,12 +37,13 @@ import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextArea;
 
+import cl.inria.stiq.tools.formatting.CustomObjectFormatter;
+
 import tod.core.database.browser.ILogBrowser;
 import tod.core.database.structure.IClassInfo;
 import tod.core.database.structure.ILocationInfo;
 import tod.gui.GUIUtils;
 import tod.gui.components.locationselector.LocationSelectorPanel;
-import tod.gui.formatter.CustomObjectFormatter;
 import zz.utils.Utils;
 import zz.utils.properties.IRWProperty;
 import zz.utils.properties.SimpleRWProperty;

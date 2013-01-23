@@ -20,20 +20,19 @@ MA 02111-1307 USA
 Parts of this work rely on the MD5 algorithm "derived from the 
 RSA Data Security, Inc. MD5 Message-Digest Algorithm".
 */
-package tod.gui.formatter;
+package cl.inria.stiq.tools.formatting;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import zz.utils.ListMap;
 import cl.inria.stiq.IGUIManager;
 import cl.inria.stiq.db.DebugFlags;
+import cl.inria.stiq.db.structure.ITypeInfo;
+import cl.inria.stiq.db.structure.ObjectId;
+import cl.inria.stiq.tools.IObjectInspector;
 import cl.inria.stiq.utils.Util;
-
-import tod.core.database.browser.IObjectInspector;
-import tod.core.database.structure.ITypeInfo;
-import tod.core.database.structure.ObjectId;
-import zz.utils.ListMap;
 
 /**
  * Manages the set of available custom object formatters.
@@ -94,26 +93,27 @@ public class CustomFormatterRegistry implements Serializable
 			IObjectInspector aInspector,
 			boolean aShowPackageNames)
 	{
-		ITypeInfo theType = aInspector.getType();
-		
-		CustomFormatterRegistry theRegistry = aGUIManager.getSettings().getCustomFormatterRegistry();
-		CustomObjectFormatter theFormatter = theRegistry.getFormatter(theType);
-		
-		if (theFormatter != null)
-		{
-			return theFormatter.formatShort(aGUIManager, aInspector);
-		}
-		else
-		{		
-			String theName = aShowPackageNames ? theType.getName() : Util.getSimpleName(theType.getName());
-			long theId = aInspector.getObject().getId();
-			
-			String theIdText = DebugFlags.IGNORE_HOST ?
-					""+ObjectId.getObjectId(theId)
-					: ObjectId.getObjectId(theId) +"." +ObjectId.getHostId(theId);
-					
-			return theName + " (" + theIdText + ")";
-		}
+//		ITypeInfo theType = aInspector.getType();
+//		
+//		CustomFormatterRegistry theRegistry = aGUIManager.getSettings().getCustomFormatterRegistry();
+//		CustomObjectFormatter theFormatter = theRegistry.getFormatter(theType);
+//		
+//		if (theFormatter != null)
+//		{
+//			return theFormatter.formatShort(aGUIManager, aInspector);
+//		}
+//		else
+//		{		
+//			String theName = aShowPackageNames ? theType.getName() : Util.getSimpleName(theType.getName());
+//			long theId = aInspector.getObject().getId();
+//			
+//			String theIdText = DebugFlags.IGNORE_HOST ?
+//					""+ObjectId.getObjectId(theId)
+//					: ObjectId.getObjectId(theId) +"." +ObjectId.getHostId(theId);
+//					
+//			return theName + " (" + theIdText + ")";
+//		}
+		return null;
 	}
 
 }

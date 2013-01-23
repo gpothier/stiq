@@ -8,5 +8,6 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/TOD-agent"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/zz.jinterp"/>
 	<classpathentry kind="con" path="org.eclipse.ajdt.core.ASPECTJRT_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/asm3-svn"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

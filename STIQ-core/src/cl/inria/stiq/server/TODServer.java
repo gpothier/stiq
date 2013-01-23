@@ -20,13 +20,8 @@ MA 02111-1307 USA
 Parts of this work rely on the MD5 algorithm "derived from the 
 RSA Data Security, Inc. MD5 Message-Digest Algorithm".
 */
-package tod.core.server;
+package cl.inria.stiq.server;
 
-import cl.inria.stiq.db.DebugFlags;
-import cl.inria.stiq.utils.ConfigUtils;
-import cl.inria.stiq.utils.TODUtils;
-import tod.core.config.TODConfig;
-import tod.core.session.ISession;
 import zz.utils.net.Server;
 import zz.utils.notification.IEvent;
 import zz.utils.notification.IFireableEvent;
@@ -34,6 +29,9 @@ import zz.utils.notification.SimpleEvent;
 import zz.utils.properties.IProperty;
 import zz.utils.properties.IRWProperty;
 import zz.utils.properties.SimpleRWProperty;
+import cl.inria.stiq.config.TODConfig;
+import cl.inria.stiq.db.DebugFlags;
+import cl.inria.stiq.utils.TODUtils;
 
 /**
  * A TOD server accepts connections from debugged VMs and process instrumentation

@@ -52,10 +52,10 @@ import cl.inria.stiq.utils.iterator.IBidiIterator;
  */
 public interface ILogBrowser
 {
-	/**
-	 * Returns the session to which this log browser pertains.
-	 */
-	public ISession getSession();
+//	/**
+//	 * Returns the session to which this log browser pertains.
+//	 */
+//	public ISession getSession();
 
 	/**
 	 * Clears all the events and other information from this log.
@@ -82,10 +82,10 @@ public interface ILogBrowser
 	 */
 	public long getDroppedEventsCount();
 
-	/**
-	 * Returns the event pointed to by the specified pointer.
-	 */
-	public ILogEvent getEvent(ExternalPointer aPointer);
+//	/**
+//	 * Returns the event pointed to by the specified pointer.
+//	 */
+//	public ILogEvent getEvent(ExternalPointer aPointer);
 
 	/**
 	 * Returns the database that holds structural information
@@ -114,209 +114,209 @@ public interface ILogBrowser
 	 */
 	public Object getRegistered(ObjectId aId);
 
-	/**
-	 * Creates a browser that only reports events that pass a specific
-	 * filter.
-	 */
-	public IEventBrowser createBrowser(IEventFilter aFilter);
-
-	/**
-	 * Creates a browser that reports all recorded events.
-	 */
-	public IEventBrowser createBrowser();
-
-	/**
-	 * Creates an empty union filter.
-	 */
-	public ICompoundFilter createUnionFilter (IEventFilter... aFilters);
-
-	/**
-	 * Creates an empty intersection filter.
-	 */
-	public ICompoundFilter createIntersectionFilter (IEventFilter... aFilters);
-
-	/**
-	 * Creates a filter that accepts only events that match the predicate.
-	 * @param aPredicate The predicate used to select events
-	 * @param aBaseFilter The source filter from which events are taken.
-	 */
-	public IEventFilter createPredicateFilter(IEventPredicate aPredicate, IEventFilter aBaseFilter);
-
-	/**
-	 * Creates a filter that accepts only events that occured at a particular 
-	 * location in the source code, indicated by a behavior and a bytecode index
-	 * within this behavior.
-	 */
-	public IEventFilter createOperationLocationFilter(IBehaviorInfo aBehavior, int aBytecodeIndex);
-
-	/**
-	 * Creates a filter that accepts only events that occured in a particular 
-	 * behavior.
-	 */
-	public IEventFilter createOperationLocationFilter(IBehaviorInfo aBehavior);
-
-	/**
-	 * Creates a filter that accepts only events that occured at a precise 
-	 * location.
-	 */
-	public IEventFilter createOperationLocationFilter(ProbeInfo aProbe);
-
-	/**
-	 * Creates a filter that accepts only events that have the specified advice source id.
-	 */
-	public IEventFilter createAdviceSourceIdFilter(int aAdviceSourceId);
-
-	/**
-	 * Creates a filter that returns all the events that are in the cflow of a particular
-	 * advice.
-	 * Note that this is different from {@link #createAdviceSourceIdFilter(int)}, as the latter
-	 * only returns events that pertain to the join point shadow of a particular advice.
-	 */
-	public IEventFilter createAdviceCFlowFilter(int aAdviceSourceId);
-
-	/**
-	 * Creates a filter that accepts only events of the given role.
-	 */
-	public IEventFilter createRoleFilter(BytecodeRole aRole);
-
-	/**
-	 * Creates a filter that accepts only behavior call events
-	 * related to a specific behavior.
-	 */
-	public IEventFilter createBehaviorCallFilter (IBehaviorInfo aBehavior);
-
-	/**
-	 * Creates a filter that accepts only behavior call events with a particular called and
-	 * executed behavior. One of those, but not both, can be null.
-	 */
-	public IEventFilter createBehaviorCallFilter(IBehaviorInfo aCalledBehavior, IBehaviorInfo aExecutedBehavior);
-
-	/**
-	 * Creates a filter that accepts only behavior call events (before call and after call).
-	 */
-	public IEventFilter createBehaviorCallFilter ();
-
-	/**
-	 * Creates a filter that accepts only the instantiation of the 
-	 * given object. Note that in the case of ambiguous object id,
-	 * the filter can accept various instantiation events.
-	 * @deprecated This is very slow - check {@link IObjectInspector#getInstantiationEvent()}
-	 */
-	public IEventFilter createInstantiationFilter (ObjectId aObjectId);
-
-	/**
-	 * Creates a filter that accepts only the instantiations of
-	 * the specified type.
-	 */
-	public IEventFilter createInstantiationsFilter (ITypeInfo aType);
-
-	/**
-	 * Creates a filter that accepts only instantiations events
-	 */
-	public IEventFilter createInstantiationsFilter ();
-
-	/**
-	 * Creates a filter that accepts only events related to a specific
-	 * field.
-	 */
-	public IEventFilter createFieldFilter (IFieldInfo aField);
-
-	/**
-	 * Creates a filter that accepts only field write events
-	 */
-	public IEventFilter createFieldWriteFilter ();
-
-	/**
-	 * Creates a filter that accepts only local variable write events
-	 */
-	public IEventFilter createVariableWriteFilter ();
-
-	/**
-	 * Creates a filter that accepts only array write events
-	 */
-	public IEventFilter createArrayWriteFilter ();
-
-	/**
-	 * Creates a filter that accepts only array write events on the specified
-	 * array index.
-	 */
-	public IEventFilter createArrayWriteFilter (int aIndex);
-
-	/**
-	 * Creates a filter that accepts only local variable write events
-	 * of the specified variable.
-	 */
-	public IEventFilter createVariableWriteFilter(LocalVariableInfo aVariable);
-
-	/**
-	 * Creates a filter that accepts only the events whose target
-	 * is the specified object reference.
-	 */
-	public IEventFilter createTargetFilter (ObjectId aId);
-
-	/**
-	 * Creates a filter that accepts only the events whose value
-	 * is the specified object reference.
-	 */
-	public IEventFilter createValueFilter (ObjectId aId);
-
-	/**
-	 * Creates a filter that accepts only the events whose result
-	 * is the specified object reference.
-	 */
-	public IEventFilter createResultFilter (ObjectId aId);
-
-	/**
-	 * Creates a filter that accepts only the events 
-	 * (behaviour calls and field writes) whose argument
-	 * is the specified object reference.
-	 */
-	public IEventFilter createArgumentFilter (ObjectId aId);
-
-	/**
-	 * Creates a filter that accepts only the behavior call events 
-	 * in which the specified object is the argument at the specified position.
-	 */
-	public IEventFilter createArgumentFilter (ObjectId aId, int aPosition);
-
-	/**
-	 * Creates a filter that accepts any event that refers to
-	 * the specified object.
-	 */
-	public IEventFilter createObjectFilter(ObjectId aId);
-
-	/**
-	 * Creates a filter that accepts only events on the given host.
-	 */
-	public IEventFilter createHostFilter (IHostInfo aHost);
-
-	/**
-	 * Creates a filter that accepts only the events that occur
-	 * in a specific thread (taking into account the host).
-	 */
-	public IEventFilter createThreadFilter (IThreadInfo aThread);
-
-	/**
-	 * Creates a filter that accepts only events that have the
-	 * specified call depth.
-	 */
-	public IEventFilter createDepthFilter(int aDepth);
-
-	/**
-	 * Creates a filter that accepts only the specified event.
-	 */
-	public IEventFilter createEventFilter(ILogEvent aEvent);
-
-	/**
-	 * Returns a synthetic parent event that contains the available root
-	 * events of the given thread.
-	 */
-	public IParentEvent getCFlowRoot(IThreadInfo aThread);
-
-	/**
-	 * Creates a filter that accepts only exception generated events.
-	 */
-	public IEventFilter createExceptionGeneratedFilter();
+//	/**
+//	 * Creates a browser that only reports events that pass a specific
+//	 * filter.
+//	 */
+//	public IEventBrowser createBrowser(IEventFilter aFilter);
+//
+//	/**
+//	 * Creates a browser that reports all recorded events.
+//	 */
+//	public IEventBrowser createBrowser();
+//
+//	/**
+//	 * Creates an empty union filter.
+//	 */
+//	public ICompoundFilter createUnionFilter (IEventFilter... aFilters);
+//
+//	/**
+//	 * Creates an empty intersection filter.
+//	 */
+//	public ICompoundFilter createIntersectionFilter (IEventFilter... aFilters);
+//
+//	/**
+//	 * Creates a filter that accepts only events that match the predicate.
+//	 * @param aPredicate The predicate used to select events
+//	 * @param aBaseFilter The source filter from which events are taken.
+//	 */
+//	public IEventFilter createPredicateFilter(IEventPredicate aPredicate, IEventFilter aBaseFilter);
+//
+//	/**
+//	 * Creates a filter that accepts only events that occured at a particular 
+//	 * location in the source code, indicated by a behavior and a bytecode index
+//	 * within this behavior.
+//	 */
+//	public IEventFilter createOperationLocationFilter(IBehaviorInfo aBehavior, int aBytecodeIndex);
+//
+//	/**
+//	 * Creates a filter that accepts only events that occured in a particular 
+//	 * behavior.
+//	 */
+//	public IEventFilter createOperationLocationFilter(IBehaviorInfo aBehavior);
+//
+//	/**
+//	 * Creates a filter that accepts only events that occured at a precise 
+//	 * location.
+//	 */
+//	public IEventFilter createOperationLocationFilter(ProbeInfo aProbe);
+//
+//	/**
+//	 * Creates a filter that accepts only events that have the specified advice source id.
+//	 */
+//	public IEventFilter createAdviceSourceIdFilter(int aAdviceSourceId);
+//
+//	/**
+//	 * Creates a filter that returns all the events that are in the cflow of a particular
+//	 * advice.
+//	 * Note that this is different from {@link #createAdviceSourceIdFilter(int)}, as the latter
+//	 * only returns events that pertain to the join point shadow of a particular advice.
+//	 */
+//	public IEventFilter createAdviceCFlowFilter(int aAdviceSourceId);
+//
+//	/**
+//	 * Creates a filter that accepts only events of the given role.
+//	 */
+//	public IEventFilter createRoleFilter(BytecodeRole aRole);
+//
+//	/**
+//	 * Creates a filter that accepts only behavior call events
+//	 * related to a specific behavior.
+//	 */
+//	public IEventFilter createBehaviorCallFilter (IBehaviorInfo aBehavior);
+//
+//	/**
+//	 * Creates a filter that accepts only behavior call events with a particular called and
+//	 * executed behavior. One of those, but not both, can be null.
+//	 */
+//	public IEventFilter createBehaviorCallFilter(IBehaviorInfo aCalledBehavior, IBehaviorInfo aExecutedBehavior);
+//
+//	/**
+//	 * Creates a filter that accepts only behavior call events (before call and after call).
+//	 */
+//	public IEventFilter createBehaviorCallFilter ();
+//
+//	/**
+//	 * Creates a filter that accepts only the instantiation of the 
+//	 * given object. Note that in the case of ambiguous object id,
+//	 * the filter can accept various instantiation events.
+//	 * @deprecated This is very slow - check {@link IObjectInspector#getInstantiationEvent()}
+//	 */
+//	public IEventFilter createInstantiationFilter (ObjectId aObjectId);
+//
+//	/**
+//	 * Creates a filter that accepts only the instantiations of
+//	 * the specified type.
+//	 */
+//	public IEventFilter createInstantiationsFilter (ITypeInfo aType);
+//
+//	/**
+//	 * Creates a filter that accepts only instantiations events
+//	 */
+//	public IEventFilter createInstantiationsFilter ();
+//
+//	/**
+//	 * Creates a filter that accepts only events related to a specific
+//	 * field.
+//	 */
+//	public IEventFilter createFieldFilter (IFieldInfo aField);
+//
+//	/**
+//	 * Creates a filter that accepts only field write events
+//	 */
+//	public IEventFilter createFieldWriteFilter ();
+//
+//	/**
+//	 * Creates a filter that accepts only local variable write events
+//	 */
+//	public IEventFilter createVariableWriteFilter ();
+//
+//	/**
+//	 * Creates a filter that accepts only array write events
+//	 */
+//	public IEventFilter createArrayWriteFilter ();
+//
+//	/**
+//	 * Creates a filter that accepts only array write events on the specified
+//	 * array index.
+//	 */
+//	public IEventFilter createArrayWriteFilter (int aIndex);
+//
+//	/**
+//	 * Creates a filter that accepts only local variable write events
+//	 * of the specified variable.
+//	 */
+//	public IEventFilter createVariableWriteFilter(LocalVariableInfo aVariable);
+//
+//	/**
+//	 * Creates a filter that accepts only the events whose target
+//	 * is the specified object reference.
+//	 */
+//	public IEventFilter createTargetFilter (ObjectId aId);
+//
+//	/**
+//	 * Creates a filter that accepts only the events whose value
+//	 * is the specified object reference.
+//	 */
+//	public IEventFilter createValueFilter (ObjectId aId);
+//
+//	/**
+//	 * Creates a filter that accepts only the events whose result
+//	 * is the specified object reference.
+//	 */
+//	public IEventFilter createResultFilter (ObjectId aId);
+//
+//	/**
+//	 * Creates a filter that accepts only the events 
+//	 * (behaviour calls and field writes) whose argument
+//	 * is the specified object reference.
+//	 */
+//	public IEventFilter createArgumentFilter (ObjectId aId);
+//
+//	/**
+//	 * Creates a filter that accepts only the behavior call events 
+//	 * in which the specified object is the argument at the specified position.
+//	 */
+//	public IEventFilter createArgumentFilter (ObjectId aId, int aPosition);
+//
+//	/**
+//	 * Creates a filter that accepts any event that refers to
+//	 * the specified object.
+//	 */
+//	public IEventFilter createObjectFilter(ObjectId aId);
+//
+//	/**
+//	 * Creates a filter that accepts only events on the given host.
+//	 */
+//	public IEventFilter createHostFilter (IHostInfo aHost);
+//
+//	/**
+//	 * Creates a filter that accepts only the events that occur
+//	 * in a specific thread (taking into account the host).
+//	 */
+//	public IEventFilter createThreadFilter (IThreadInfo aThread);
+//
+//	/**
+//	 * Creates a filter that accepts only events that have the
+//	 * specified call depth.
+//	 */
+//	public IEventFilter createDepthFilter(int aDepth);
+//
+//	/**
+//	 * Creates a filter that accepts only the specified event.
+//	 */
+//	public IEventFilter createEventFilter(ILogEvent aEvent);
+//
+//	/**
+//	 * Returns a synthetic parent event that contains the available root
+//	 * events of the given thread.
+//	 */
+//	public IParentEvent getCFlowRoot(IThreadInfo aThread);
+//
+//	/**
+//	 * Creates a filter that accepts only exception generated events.
+//	 */
+//	public IEventFilter createExceptionGeneratedFilter();
 
 	/**
 	 * Creates an inspector that permits to evaluate the state of the specified
@@ -330,11 +330,11 @@ public interface ILogBrowser
 	 */
 	public IObjectInspector createClassInspector (IClassInfo aClass);
 
-	/**
-	 * Creates an inspector that permits to determine the value of a behavior's
-	 * local variables at any point in time.
-	 */
-	public IVariablesInspector createVariablesInspector (IBehaviorCallEvent aEvent);
+//	/**
+//	 * Creates an inspector that permits to determine the value of a behavior's
+//	 * local variables at any point in time.
+//	 */
+//	public IVariablesInspector createVariablesInspector (IBehaviorCallEvent aEvent);
 
 	/**
 	 * Searches a text in the registered strings.

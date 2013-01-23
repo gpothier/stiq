@@ -30,12 +30,12 @@ import cl.inria.stiq.IGUIManager;
 import cl.inria.stiq.db.DebugFlags;
 import cl.inria.stiq.db.structure.impl.HostInfo;
 import cl.inria.stiq.db.structure.impl.StructureDatabase;
+import cl.inria.stiq.server.TODServer;
 import cl.inria.stiq.transport.ILogCollector;
 
 import tod.core.config.TODConfig;
 import tod.core.database.browser.ILogBrowser;
 import tod.core.database.structure.IMutableStructureDatabase;
-import tod.core.server.TODServer;
 import tod.core.session.AbstractSession;
 import tod.utils.PrintThroughCollector;
 import zz.utils.properties.IRWProperty;

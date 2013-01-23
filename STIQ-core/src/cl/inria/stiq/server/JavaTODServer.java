@@ -20,7 +20,7 @@ MA 02111-1307 USA
 Parts of this work rely on the MD5 algorithm "derived from the 
 RSA Data Security, Inc. MD5 Message-Digest Algorithm".
 */
-package tod.impl.server;
+package cl.inria.stiq.server;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -32,18 +32,16 @@ import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
 
-import cl.inria.stiq.db.structure.impl.HostInfo;
-import cl.inria.stiq.instrumenter.IInstrumenter;
-import cl.inria.stiq.transport.ILogCollector;
-
-import tod.core.config.TODConfig;
-import tod.core.database.structure.IStructureDatabase;
-import tod.core.server.TODServer;
-import tod.core.transport.CollectorLogReceiver;
-import tod.core.transport.LogReceiver;
 import tod2.agent.AgentConfig;
 import zz.utils.properties.IRWProperty;
 import zz.utils.properties.SimpleRWProperty;
+import cl.inria.stiq.config.TODConfig;
+import cl.inria.stiq.db.structure.IStructureDatabase;
+import cl.inria.stiq.db.structure.impl.HostInfo;
+import cl.inria.stiq.instrumenter.IInstrumenter;
+import cl.inria.stiq.transport.CollectorLogReceiver;
+import cl.inria.stiq.transport.ILogCollector;
+import cl.inria.stiq.transport.LogReceiver;
 
 public class JavaTODServer extends TODServer
 {

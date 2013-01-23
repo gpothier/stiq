@@ -26,13 +26,13 @@ import java.awt.Color;
 
 import javax.swing.JPanel;
 
+import cl.inria.stiq.Hyperlinks;
 import cl.inria.stiq.IGUIManager;
 
 import tod.core.database.browser.ICompoundInspector.EntryValue;
 import tod.core.database.event.ILogEvent;
 import tod.gui.FontConfig;
 import tod.gui.GUIUtils;
-import tod.gui.Hyperlinks;
 import tod.gui.activities.cflow.CFlowSeed;
 import tod.gui.components.objectwatch.AbstractWatchProvider.Entry;
 import tod.gui.kit.AsyncPanel;

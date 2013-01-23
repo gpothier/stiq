@@ -24,13 +24,13 @@ package tod.gui.components.eventlist;
 
 import java.awt.Color;
 
+import cl.inria.stiq.Hyperlinks;
 import cl.inria.stiq.IGUIManager;
 import cl.inria.stiq.utils.Util;
 
 import tod.core.database.event.IExceptionGeneratedEvent;
 import tod.core.database.structure.IBehaviorInfo;
 import tod.gui.FontConfig;
-import tod.gui.Hyperlinks;
 import tod.gui.kit.StdOptions;
 import tod.gui.kit.html.HtmlBody;
 import tod.gui.kit.html.HtmlText;
