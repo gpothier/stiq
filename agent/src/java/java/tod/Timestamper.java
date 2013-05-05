@@ -22,6 +22,8 @@ RSA Data Security, Inc. MD5 Message-Digest Algorithm".
 */
 package java.tod;
 
+import java.tod.io._IO;
+
 import tod.agent.BitUtilsLite;
 
 /**
@@ -55,17 +57,20 @@ public class Timestamper extends Thread
 		start();
 	}
 	
+	private static Timestamper instance = new Timestamper();
+	
 	public transient static long t = System.nanoTime() << TIMESTAMP_ADJUST_SHIFT;
 	
 	@Override
 	public void run()
 	{
+		_IO.out("Timestamper thread starting");
 		try
 		{
 			while(true)
 			{
 				update();
-				sleep(1);
+				sleep(10);
 			}
 		}
 		catch (Exception e)
